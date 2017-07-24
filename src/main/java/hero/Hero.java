@@ -19,8 +19,20 @@ public class Hero {
     static float fitness = 0.0f;
     static Level level = new Level();
     static Time time = new Time();
+    public Hero () {}
+    public Hero(String name) {
+        this.name = name;
+    }
 
-    public static void main (String[] args) throws IOException {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public static void start() throws IOException {
         System.out.print("Hi, my hero!\nYou can read, sleep, eat, work, study, enjoy, wash, train yourself and go date a girl.\n");
 
         while (true)

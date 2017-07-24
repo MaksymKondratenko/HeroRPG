@@ -100,7 +100,7 @@ class EnjoymentSwitcher {
 }
 
 class EnjoymentList {
-    ArrayList<String> enjoyList = new ArrayList<>();
+    ArrayList<String> enjoyList = new ArrayList<String>();
 
     public ArrayList<String> getEnjoymentList() {
         enjoyList.add(TV.id);

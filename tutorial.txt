@@ -1,0 +1,33 @@
+Hi, here i would like to introduce you to the game and explain commands Hero is able to do.
+So, lets go:
+
+
+Hero, as you might have been noticed, is a hero of this game. Your task as a player is to have fun, giving him commands and observing his development. So, there are commands you could ask Hero to do:
+
+1) read - tells him to read. He will ask to precise your ask and choose from several book categories;
+
+2) enjoy - tels him to entertain himself. He will ask to precise your ask and choose from several activities he prefers to conduct;
+
+3) train - tells him to do some exercises. He ask to precise your ask and choose what body element to choose;
+
+4) eat - tells him to eat. He ask to precise your ask and choose from several meals he prefers;
+
+5) work - tells him to work. As you will spend some money on different activities, you need to work to survive;
+
+6) sleep - takes him to have a full sleep;
+
+7) study - tells him to go to university. As he reaches study progress limit, Hero will graduate from university. Make sure you have enough money!
+
+8) date - tells Hero to go on a date. He'll then ask you to type a name of a girl (maybe even a guy) to go on a date with. 
+Feel free to imagine. You have a chance to become a couple!
+
+
+Other commands:
+
+1) show time - shows, how much days, hours and minutes have gone there, since game universe was created.
+
+Other features will be added due to new updates!
+
+Relax and have fun! 
+
+P.S.: in case you are asked to chose between several suggestions just print them in lower case.

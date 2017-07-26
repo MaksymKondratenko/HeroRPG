@@ -6,12 +6,30 @@ import java.util.Random;
  * Created by Maksym on 17.02.2017.
  */
 public class Girl {
-    String name;
-    Random lucky;
+    private String name;
+    private Random lucky;
+
+    public Girl() {
+    }
 
     Girl(String name){
         this.name = name;
         this.lucky = new Random();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Random getLucky() {
+        return lucky;
+    }
+
+    public void setLucky(Random lucky) {
+        this.lucky = lucky;
+    }
 }

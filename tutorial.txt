@@ -2,15 +2,15 @@ Hi, here i would like to introduce you to the game and explain commands Hero is 
 So, lets go:
 
 
-Hero, as you might have been noticed, is a hero of this game. Your task as a player is to have fun, giving him commands and observing his development. So, there are commands you could ask Hero to do:
+Hero, as you might have been noticed, is a hero of this game. Your task as a player is to have fun, giving him commands and observing his development. So, there are commandsï¿½you could ask Hero to do:
 
-1) read - tells him to read. He will ask to precise your ask and choose from several book categories;
+1) read - tells him to read. He willï¿½ask to precise your ask and choose from several books categories;
 
-2) enjoy - tels him to entertain himself. He will ask to precise your ask and choose from several activities he prefers to conduct;
+2) enjoy - tels him to entertain himself.ï¿½He will ask to precise your ask and choose from several activities he prefers to conduct;
 
-3) train - tells him to do some exercises. He ask to precise your ask and choose what body element to choose;
+3) train - tells him to do some exercises.ï¿½He ask to precise your ask and choose what body element to choose;
 
-4) eat - tells him to eat. He ask to precise your ask and choose from several meals he prefers;
+4) eat - tells him to eat.ï¿½He ask to precise your ask and choose from several meals he prefers;
 
 5) work - tells him to work. As you will spend some money on different activities, you need to work to survive;
 
@@ -28,6 +28,6 @@ Other commands:
 
 Other features will be added due to new updates!
 
-Relax and have fun! 
+Relax and have fun!ï¿½
 
 P.S.: in case you are asked to chose between several suggestions just print them in lower case.

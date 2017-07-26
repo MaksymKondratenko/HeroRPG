@@ -6,7 +6,10 @@ package hero;
 public class Level {
     int lvl = 1;
 
-    public int xpEarn (int xp){
+    public Level() {
+    }
+
+    /*public int xpEarn (int xp){
         int temp = Hero.xp;
         Hero.xp += xp;
         Delta.xp = "(+" + xp + ")";
@@ -29,5 +32,13 @@ public class Level {
         Delta.level = "(+1)";
         System.out.println("Congrats on new level!");
         return lvl;
+    }*/
+
+    public int getLvl() {
+        return lvl;
+    }
+
+    public void setLvl(int lvl) {
+        this.lvl = lvl;
     }
 }

@@ -2,12 +2,15 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.samples</groupId>
     <artifactId>HeroRPG</artifactId>
+    <packaging>jar</packaging>
     <version>0.0.1-SNAPSHOT</version>
+
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <goal>deploy</goal>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>

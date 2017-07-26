@@ -1,27 +1,102 @@
 package hero;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
  * Created by Maksym on 14.02.2017.
  */
 public class Hero {
-    String name;
-    static int xp = 0;
-    static int hunger = 100;
-    static int rest = 100;
-    static int excitement = 100;
-    static int appeal = 0;
-    static int money = 10;
-    static float studyingProcess = 0.0f;
-    static float fitness = 0.0f;
-    static Level level = new Level();
-    static Time time = new Time();
+    private static Hero singleHero;
+    private String name = "Sir Lancelot";
+    private int xp = 0;
+    private int hunger = 100;
+    private int rest = 100;
+    private int excitement = 100;
+    private int appeal = 0;
+    private int money = 10;
+    private float studyingProcess = 0.0f;
+    private float fitness = 0.0f;
+    private Level level = new Level();
+
     public Hero () {}
     public Hero(String name) {
         this.name = name;
+    }
+
+    public int getXp() {
+        return xp;
+    }
+
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+
+    public int getHunger() {
+        return hunger;
+    }
+
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+
+    public int getRest() {
+        return rest;
+    }
+
+    public void setRest(int rest) {
+        this.rest = rest;
+    }
+
+    public int getExcitement() {
+        return excitement;
+    }
+
+    public void setExcitement(int excitement) {
+        this.excitement = excitement;
+    }
+
+    public int getAppeal() {
+        return appeal;
+    }
+
+    public void setAppeal(int appeal) {
+        this.appeal = appeal;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    public float getStudyingProcess() {
+        return studyingProcess;
+    }
+
+    public void setStudyingProcess(float studyingProcess) {
+        this.studyingProcess = studyingProcess;
+    }
+
+    public float getFitness() {
+        return fitness;
+    }
+
+    public void setFitness(float fitness) {
+        this.fitness = fitness;
+    }
+
+    public Level getLevel() {
+        return level;
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
+    }
+
+    public Hero getHero(){
+        if(singleHero == null)
+            singleHero = new Hero();
+        return singleHero;
     }
 
     public String getName() {
@@ -32,106 +107,9 @@ public class Hero {
         this.name = name;
     }
 
-    public static void start() throws IOException {
-        System.out.print("Hi, my hero!\nYou can read, sleep, eat, work, study, enjoy, wash, train yourself and go date a girl.\n");
 
-        while (true)
-        {
-            System.out.print("What you are going to do next? (just type a word! Type \"help\" for help.)\n");
-            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-            String str = br.readLine();
 
-            //if hero is asked to read
-            if ("read".equals(str.toLowerCase())) {
-                BookList bookList = new BookList();
-                System.out.print("\n");
-                bookList.showBookList();
-                BookSwitcher.switcher(br.readLine());
-                System.out.print("\n");
-                String s = "Reading a book...";
-                String f = "You are now smarter!";
-                Printer.p(s, f);
-            }
-
-            if ("sleep".equals(str.toLowerCase())) {
-                String s = "Sleeping...";
-                String f = "Renovated!";
-                sleep();
-                Printer.p(s, f);
-            }
-
-            if ("eat".equals(str.toLowerCase())) {
-                FoodList foodList = new FoodList();
-                System.out.print("\n");
-                foodList.showFoodList();
-                FoodSwitcher.switcher(br.readLine());
-            }
-
-            if ("work".equals(str.toLowerCase())) {
-                String s = "Working...";
-                String f = "Work done!";
-                work();
-                Printer.p(s, f);
-            }
-
-            if ("enjoy".equals(str.toLowerCase())) {
-                EnjoymentList enjoymentList = new EnjoymentList();
-                System.out.print("\n");
-                enjoymentList.showEnjoymentList();
-                EnjoymentSwitcher.switcher(br.readLine());
-            }
-
-            if ("study".equals(str.toLowerCase())) {
-                String s = "Diving into the pile of books...";
-                String f = "Progress!";
-                study();
-                Printer.p(s, f);
-                System.out.println("Study Process: " + studyingProcess * 100 + "%\n");
-            }
-
-            if ("wash".equals(str.toLowerCase())) {
-                WashList washList = new WashList();
-                washList.showWashList();
-                WashSwitcher.switcher(br.readLine());
-
-                System.out.print("Cleaning yourself...\n");
-                System.out.println("Appeal: " + appeal + "   | " + Delta.appeal);
-                System.out.print("\nCleaner a bit!");
-            }
-
-            if ("train".equals(str.toLowerCase())) {
-                TrainList trainList = new TrainList();
-                System.out.print("\n");
-                trainList.showTrainList();
-                TrainSwitcher.switcher(br.readLine());
-
-                String s = "Longer, better, faster, stronger...";
-                String f = "Uchh, nice training.";
-                Printer.p(s, f);
-                System.out.println("Fitness level: " + fitness * 100 + "%\n");
-            }
-
-            if ("date".equals(str.toLowerCase())) {
-                date();
-            }
-
-            if ("show time".equals(str.toLowerCase())){
-                time.showTime();
-            }
-
-            if ("help".equals(str.toLowerCase())) {
-                System.out.print("Type: read - to read a book\n      sleep - to sleep\n      eat - to eat food\n      " +
-                        "work - to do some job and earn money\n      enjoy - to spend some time with relax\n      " +
-                        "train - to go to gym\n      study - to gain some knowledge\n      wash - to clean the hero\n      " +
-                        "date - to go to date\n      show time - to show the game time\n      end - to exit");
-            }
-
-            if ("end".equals(str.toLowerCase()))
-                break;
-        }
-    }
-
-    public static void sleep (){
+    /*public static void sleep (){
         time.addTime(360);
         hunger -= 3;
         Delta.hunger = "(-3)";
@@ -178,5 +156,5 @@ public class Hero {
             System.out.println("You've found a couple! Her name is "+ girl.name);
         else
             System.out.println("Not your time, bro.");
-    }
+    }*/
 }

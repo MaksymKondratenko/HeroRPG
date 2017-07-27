@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true"
+>
+    <bean id="enjoy" class="enjoyment.Enjoyment" depends-on="enjoymentLister" scope="prototype"/>
+    <bean id="cinema" class="enjoyment.Cinema">
+        <property name="money" value="-2"/>
+        <property name="xp" value="6"/>
+        <property name="hunger" value="-8"/>
+        <property name="rest" value="5"/>
+        <property name="excitement" value="30"/>
+    </bean>
+    <bean id="dance" class="enjoyment.Dance">
+        <property name="xp" value="1"/>
+        <property name="hunger" value="-10"/>
+        <property name="rest" value="5"/>
+        <property name="excitement" value="30"/>
+    </bean>
+    <bean id="skate" class="enjoyment.Skate">
+        <property name="xp" value="2"/>
+        <property name="hunger" value="-15"/>
+        <property name="rest" value="10"/>
+        <property name="excitement" value="25"/>
+    </bean>
+    <bean id="theater" class="enjoyment.Theater">
+        <property name="money" value="-3"/>
+        <property name="xp" value="4"/>
+        <property name="hunger" value="-5"/>
+        <property name="rest" value="25"/>
+        <property name="excitement" value="40"/>
+    </bean>
+    <bean id="tv" class="enjoyment.TV">
+        <property name="xp" value="2"/>
+        <property name="hunger" value="-2"/>
+        <property name="rest" value="10"/>
+        <property name="excitement" value="20"/>
+    </bean>
+    <bean id="enjoymentLister" class="enjoyment.EnjoymentLister" init-method="showEnjoymentList" scope="prototype">
+        <property name="enjoymentList">
+            <list>
+                <ref bean="cinema"/>
+                <ref bean="dance"/>
+                <ref bean="skate"/>
+                <ref bean="theater"/>
+                <ref bean="tv"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="enjoymentList" class="java.util.ArrayList" scope="prototype"/>
+</beans>

@@ -5,7 +5,7 @@ import hero.Action;
 /**
  * Created by Maksym on 21.02.2017.
  */
-public class Food implements Action {
+public class Food extends Action {
     public Food() {
     }
 

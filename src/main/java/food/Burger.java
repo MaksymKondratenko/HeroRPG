@@ -1,12 +1,20 @@
 package food;
 
+import hero.Level;
+import utils.Time;
+
 public class Burger extends Food {
     private String info = "The fastest way to get TTT!";
-    private int m = -1;
-    private int x = 1;
-    private int h = 30;
-    private int ex = 1;
-    private float f = -0.05f;
+    private Time time;
+    private int xp;
+    private Level level;
+    private int hunger;
+    private int rest;
+    private int excitement;
+    private int appeal;
+    private int money;
+    private float studyingProcess;
+    private float fitness;
 
     public Burger() {
     }
@@ -19,44 +27,100 @@ public class Burger extends Food {
         this.info = info;
     }
 
-    public int getM() {
-        return m;
+    public Time getTime() {
+        return time;
     }
 
-    public void setM(int m) {
-        this.m = m;
+    public void setTime(Time time) {
+        this.time = time;
     }
 
-    public int getX() {
-        return x;
+    @Override
+    public int getXp() {
+        return xp;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    @Override
+    public void setXp(int xp) {
+        this.xp = xp;
     }
 
-    public int getH() {
-        return h;
+    public Level getLevel() {
+        return level;
     }
 
-    public void setH(int h) {
-        this.h = h;
+    public void setLevel(Level level) {
+        this.level = level;
     }
 
-    public int getEx() {
-        return ex;
+    @Override
+    public int getHunger() {
+        return hunger;
     }
 
-    public void setEx(int ex) {
-        this.ex = ex;
+    @Override
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
     }
 
-    public float getF() {
-        return f;
+    @Override
+    public int getRest() {
+        return rest;
     }
 
-    public void setF(float f) {
-        this.f = f;
+    @Override
+    public void setRest(int rest) {
+        this.rest = rest;
+    }
+
+    @Override
+    public int getExcitement() {
+        return excitement;
+    }
+
+    @Override
+    public void setExcitement(int excitement) {
+        this.excitement = excitement;
+    }
+
+    @Override
+    public int getAppeal() {
+        return appeal;
+    }
+
+    @Override
+    public void setAppeal(int appeal) {
+        this.appeal = appeal;
+    }
+
+    @Override
+    public int getMoney() {
+        return money;
+    }
+
+    @Override
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    @Override
+    public float getStudyingProcess() {
+        return studyingProcess;
+    }
+
+    @Override
+    public void setStudyingProcess(float studyingProcess) {
+        this.studyingProcess = studyingProcess;
+    }
+
+    @Override
+    public float getFitness() {
+        return fitness;
+    }
+
+    @Override
+    public void setFitness(float fitness) {
+        this.fitness = fitness;
     }
 
     public String toString() {

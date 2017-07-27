@@ -1,9 +1,11 @@
 package utils;
 
+import hero.Action;
+
 /**
  * Created by Maksym on 20.02.2017.
  */
-public class Time {
+public class Time extends Action {
 
     private int d = 0;
     private int h = 0;
@@ -25,6 +27,10 @@ public class Time {
         this.date = date;
     }
 
+    public int getDate() {
+        return date;
+    }
+
     private int date = 0;
 
     public int addTime(int mins){
@@ -33,25 +39,20 @@ public class Time {
     }
 
     public int getM(){
-        m = date%60;
-        return m;
+        return date%60;
     }
 
     public int getH(){
-        h = ((date - date%60)/60)%24;
-        return h;
+        return  ((date - date%60)/60)%24;
     }
 
-    public int getDate(){
-        d = /*(date - date%60)/60 - */(date - date%60)/(60*24);// - date%(60*24) - date%(60);
-        return d;
+    public int getD(){
+        return (date - date%60)/(60*24);
     }
 
 
     public void showTime(){
-        m = getM();
-        h = getH();
-        d = getDate();
-        System.out.println("Time elapsed: " + d + " days, " + h + " hours, " + m + " minutes.");
+
+        System.out.println("Time elapsed: " + getD() + " days, " + getH() + " hours, " + getM() + " minutes.");
     }
 }

@@ -5,7 +5,8 @@ import hero.Action;
 /**
  * Created by Maksym on 21.02.2017.
  */
-public class Enjoyment implements Action {
+public class Enjoyment extends Action {
+
     public Enjoyment() {
     }
 

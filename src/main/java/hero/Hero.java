@@ -93,12 +93,6 @@ public class Hero {
         this.level = level;
     }
 
-    public Hero getHero(){
-        if(singleHero == null)
-            singleHero = new Hero();
-        return singleHero;
-    }
-
     public String getName() {
         return name;
     }
@@ -109,44 +103,10 @@ public class Hero {
 
 
 
-    /*public static void sleep (){
-        time.addTime(360);
-        hunger -= 3;
-        Delta.hunger = "(-3)";
-        rest += 20;
-        Delta.rest = "(+20)";
-    }
 
-    public static void work(){
-        time.addTime(480);
-        level.xpEarn(5);
-        hunger -= 20;
-        Delta.hunger = "(-20)";
-        rest -= 20;
-        Delta.rest = "(-20)";
-        excitement -= 20;
-        Delta.excitement = "(-20)";
-        money += 10;
-        Delta.money = "(+10)";
-    }
+    /*
 
-    public static void study(){
-        time.addTime(360);
-        level.xpEarn(5);
-        hunger -= 20;
-        Delta.hunger = "(-20)";
-        rest -= 15;
-        Delta.rest = "(-15)";
-        excitement -= 20;
-        Delta.excitement = "(-20)";
-
-        if (studyingProcess < 1.0f)
-            studyingProcess += 0.05f;
-        else
-            System.out.println("You have already finished the University!");
-    }
-
-    public static void date() throws IOException {
+        public static void date() throws IOException {
         time.addTime(120);
 
         System.out.println("You are going to hunt a new chick. Who'd be next?");

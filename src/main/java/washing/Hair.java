@@ -1,9 +1,21 @@
 package washing;
 
+import hero.Level;
+import utils.Time;
+
 public class Hair extends Washing {
     private String id = "Grass hair";
     private String info = "Stylish look!";
-    private int x = 1;
+    private Time time;
+    private int xp;
+    private Level level;
+    private int hunger;
+    private int rest;
+    private int excitement;
+    private int appeal;
+    private int money;
+    private float studyingProcess;
+    private float fitness;
 
     public Hair() {
     }
@@ -24,12 +36,100 @@ public class Hair extends Washing {
         this.info = info;
     }
 
-    public int getX() {
-        return x;
+    public Time getTime() {
+        return time;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    public void setTime(Time time) {
+        this.time = time;
+    }
+
+    @Override
+    public int getXp() {
+        return xp;
+    }
+
+    @Override
+    public void setXp(int xp) {
+        this.xp = xp;
+    }
+
+    public Level getLevel() {
+        return level;
+    }
+
+    public void setLevel(Level level) {
+        this.level = level;
+    }
+
+    @Override
+    public int getHunger() {
+        return hunger;
+    }
+
+    @Override
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
+    }
+
+    @Override
+    public int getRest() {
+        return rest;
+    }
+
+    @Override
+    public void setRest(int rest) {
+        this.rest = rest;
+    }
+
+    @Override
+    public int getExcitement() {
+        return excitement;
+    }
+
+    @Override
+    public void setExcitement(int excitement) {
+        this.excitement = excitement;
+    }
+
+    @Override
+    public int getAppeal() {
+        return appeal;
+    }
+
+    @Override
+    public void setAppeal(int appeal) {
+        this.appeal = appeal;
+    }
+
+    @Override
+    public int getMoney() {
+        return money;
+    }
+
+    @Override
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    @Override
+    public float getStudyingProcess() {
+        return studyingProcess;
+    }
+
+    @Override
+    public void setStudyingProcess(float studyingProcess) {
+        this.studyingProcess = studyingProcess;
+    }
+
+    @Override
+    public float getFitness() {
+        return fitness;
+    }
+
+    @Override
+    public void setFitness(float fitness) {
+        this.fitness = fitness;
     }
 
     public String toString() {

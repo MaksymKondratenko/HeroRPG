@@ -7,120 +7,26 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-lazy-init="true"
 >
+
+    <import resource="TrainContext.xml"/>
+    <import resource="BookContext.xml"/>
+    <import resource="EnjoymentContext.xml"/>
+    <import resource="FoodContext.xml"/>
+    <import resource="WashingContext.xml"/>
+    <import resource="ActivitiesContext.xml"/>
+
     <bean id="adventure" class="adventure.Adventure" depends-on="hero" init-method="start"/>
     <bean id="hero" class="hero.Hero"
           c:name="Sir"/>
-
-    <bean id="train" class="body.Body" depends-on="trainLister" scope="prototype"/>
-    <bean id="bicep" class="body.Bicep"/>
-    <bean id="back" class="body.Back"/>
-    <bean id="legs" class="body.Legs"/>
-    <bean id="neck" class="body.Neck"/>
-    <bean id="press" class="body.Press"/>
-    <bean id="trainLister" class="body.TrainLister" init-method="showTrainList" scope="prototype">
-        <property name="trainList">
-            <list>
-                <ref bean="bicep"/>
-                <ref bean="back"/>
-                <ref bean="legs"/>
-                <ref bean="neck"/>
-                <ref bean="press"/>
-            </list>
-        </property>
-    </bean>
-    <bean id="trainList" class="java.util.ArrayList" scope="prototype"/>
-    <bean id="trainSwitcher" class="body.TrainSwitcher"/>
-
-    <bean id="read" class="books.Book" depends-on="bookLister" scope="prototype"/>
-    <bean id="arts" class="books.Arts"/>
-    <bean id="business" class="books.Business"/>
-    <bean id="economics" class="books.Economics"/>
-    <bean id="law" class="books.Law"/>
-    <bean id="literature" class="books.Literature"/>
-    <bean id="programming" class="books.Programming"/>
-    <bean id="psychology" class="books.Psychology"/>
-    <bean id="bookLister" class="books.BookLister" init-method="showBookList" scope="prototype">
-        <property name="bookList">
-            <list>
-                <ref bean="arts"/>
-                <ref bean="business"/>
-                <ref bean="economics"/>
-                <ref bean="law"/>
-                <ref bean="literature"/>
-                <ref bean="programming"/>
-                <ref bean="psychology"/>
-            </list>
-        </property>
-    </bean>
-    <bean id="bookList" class="java.util.ArrayList" scope="prototype"/>
-    <bean id="bookSwitcher" class="books.BookSwitcher"/>
-
-    <bean id="enjoy" class="enjoyment.Enjoyment" depends-on="enjoymentLister" scope="prototype"/>
-    <bean id="cinema" class="enjoyment.Cinema"/>
-    <bean id="dance" class="enjoyment.Dance"/>
-    <bean id="skate" class="enjoyment.Skate"/>
-    <bean id="theater" class="enjoyment.Theater"/>
-    <bean id="tv" class="enjoyment.TV"/>
-    <bean id="enjoymentLister" class="enjoyment.EnjoymentLister" init-method="showEnjoymentList" scope="prototype">
-        <property name="enjoymentList">
-            <list>
-                <ref bean="cinema"/>
-                <ref bean="dance"/>
-                <ref bean="skate"/>
-                <ref bean="theater"/>
-                <ref bean="tv"/>
-            </list>
-        </property>
-    </bean>
-    <bean id="enjoymentList" class="java.util.ArrayList" scope="prototype"/>
-    <bean id="enjoymentSwitcher" class="enjoyment.EnjoymentSwitcher"/>
-
-    <bean id="eat" class="food.Food"  depends-on="foodLister"/>
-    <bean id="burger" class="food.Burger"/>
-    <bean id="cake" class="food.Cake"/>
-    <bean id="pizza" class="food.Pizza"/>
-    <bean id="salad" class="food.Salad"/>
-    <bean id="soup" class="food.Soup"/>
-    <bean id="foodLister" class="food.FoodLister" init-method="showFoodList" scope="prototype">
-        <property name="foodList">
-            <list>
-                <ref bean="burger"/>
-                <ref bean="cake"/>
-                <ref bean="pizza"/>
-                <ref bean="salad"/>
-                <ref bean="soup"/>
-            </list>
-        </property>
-    </bean>
-    <bean id="foodList" class="java.util.ArrayList" scope="prototype"/>
-    <bean id="foodSwitcher" class="food.FoodSwitcher"/>
-
-    <bean id="wash" class="washing.Washing" depends-on="washLister"/>
-    <bean id="bath" class="washing.Bath"/>
-    <bean id="hair" class="washing.Hair"/>
-    <bean id="nails" class="washing.Nails"/>
-    <bean id="shower" class="washing.Shower"/>
-    <bean id="teeth" class="washing.Teeth"/>
-    <bean id="washLister" class="washing.WashLister" init-method="showWashList" scope="prototype">
-        <property name="washList">
-            <list>
-                <ref bean="bath"/>
-                <ref bean="hair"/>
-                <ref bean="nails"/>
-                <ref bean="shower"/>
-                <ref bean="teeth"/>
-            </list>
-        </property>
-    </bean>
-    <bean id="washList" class="java.util.ArrayList" scope="prototype"/>
-    <bean id="washSwitcher" class="washing.WashSwitcher"/>
 
     <bean id="girl" class="hero.Girl"/>
 
     <bean id="level" class="hero.Level"/>
 
-    <bean id="delta" class="utils.Delta"/>
     <bean id="printer" class="utils.Printer"/>
     <bean id="time" class="utils.Time"/>
     <bean id="help" class="utils.Help" init-method="showInfo" scope="prototype"/>
+
+    <bean id="actionProcessor" class="logic.ActionProcessor"/>
+
 </beans>

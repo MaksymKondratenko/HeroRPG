@@ -1,37 +1,33 @@
 package utils;
 
+
+import hero.Action;
+import hero.Hero;
+
 /**
  * Created by Maksym on 23.02.2017.
  */
 public class Printer {
 
-    public void p(){
-        System.out.println();
+    public void printStats(Hero hero, Action action) {
+        System.out.println("\nYour stats are next:");
+        System.out.println("XP: " + hero.getXp() + "          |  (" + (action.getXp() != 0 ? action.getXp() : "") + ")");
+        System.out.println("Level: " + hero.getLevel().getLvl());
+        System.out.println("Hunger: " + hero.getHunger() + "     |  (" + (action.getHunger() != 0 ? action.getHunger() : "") + ")");
+        System.out.println("Rest: " + hero.getRest() + "       |  (" + (action.getRest() != 0 ? action.getRest() : "") + ")");
+        System.out.println("Excitement: " + hero.getExcitement() + " |  (" + (action.getExcitement() != 0 ? action.getExcitement() : "") + ")");
+        System.out.println("Money: $" + hero.getMoney() + "     |  (" + (action.getMoney() != 0 ? action.getMoney() : "") + ")\n");
     }
 
-    public void p(String str){
-        System.out.println(str);
+    public void printAppeal(Hero hero, Action action) {
+        System.out.println("\nAppeal: " + hero.getAppeal() + "   |  (" + (action.getAppeal() != 0 ? action.getAppeal() : "") + ")\n");
     }
 
-    public void p(String s, String f) {
-        p(s);
-      //  printStats();
-        p(f);
-        p();
+    public void printFitness(Hero hero, Action action) {
+        System.out.println("\nFitness: " + hero.getFitness() + "   |  (" + (action.getFitness() != 0 ? action.getFitness() : "") + ")\n");
     }
 
-  /*  public void printStats(){
-        p();
-        System.out.println("XP: " + Hero.xp + "          |  " + (Delta.xp != null ? Delta.xp : ""));
-        System.out.println("Level: " + Hero.level.lvl);
-        System.out.println("Hunger: " + Hero.hunger + "     |  " + (Delta.hunger != null ? Delta.hunger : ""));
-        System.out.println("Rest: " + Hero.rest + "       |  " + (Delta.rest != null ? Delta.rest : ""));
-        System.out.println("Excitement: " + Hero.excitement + " |  " + (Delta.excitement != null ? Delta.excitement : ""));
-        System.out.println("Money: $" + Hero.money + "     |  " + (Delta.money != null ? Delta.money : ""));
-        p();
+    public void printStudyingProcess(Hero hero, Action action) {
+        System.out.println("\nStudying process: " + hero.getStudyingProcess() * 100 + "%   |  (" + (action.getStudyingProcess() != 0 ? action.getStudyingProcess() * 100 + "%" : "") + ")\n");
     }
-
-    public void printFitness() {
-        System.out.println("Fitness: " + Hero.fitness + "   |  " + (Delta.fitness != null ? Delta.fitness : ""));
-    }*/
 }

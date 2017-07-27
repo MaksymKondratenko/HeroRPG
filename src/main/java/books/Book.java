@@ -5,7 +5,7 @@ import hero.Action;
 /**
  * Created by Maksym on 21.02.2017.
  */
-public class Book implements Action{
+public class Book extends Action{
    /* public static void read(int xp, int h, int r, int ex, String info){
         Hero.time.addTime(60);
         Hero.level.xpEarn(xp);

@@ -1,13 +1,21 @@
 package enjoyment;
 
+import hero.Level;
+import utils.Time;
+
 public class TV extends Enjoyment{
     private String id = "Watch TV";
     private String info = "Watch TV to get stupid.";
-    private int m = 0;
-    private int x = 2;
-    private int h = -2;
-    private int r = 10;
-    private int ex = 20;
+    private Time time;
+    private int xp;
+    private Level level;
+    private int hunger;
+    private int rest;
+    private int excitement;
+    private int appeal;
+    private int money;
+    private float studyingProcess;
+    private float fitness;
 
     public TV() {
     }
@@ -28,44 +36,100 @@ public class TV extends Enjoyment{
         this.info = info;
     }
 
-    public int getM() {
-        return m;
+    public Time getTime() {
+        return time;
     }
 
-    public void setM(int m) {
-        this.m = m;
+    public void setTime(Time time) {
+        this.time = time;
     }
 
-    public int getX() {
-        return x;
+    @Override
+    public int getXp() {
+        return xp;
     }
 
-    public void setX(int x) {
-        this.x = x;
+    @Override
+    public void setXp(int xp) {
+        this.xp = xp;
     }
 
-    public int getH() {
-        return h;
+    public Level getLevel() {
+        return level;
     }
 
-    public void setH(int h) {
-        this.h = h;
+    public void setLevel(Level level) {
+        this.level = level;
     }
 
-    public int getR() {
-        return r;
+    @Override
+    public int getHunger() {
+        return hunger;
     }
 
-    public void setR(int r) {
-        this.r = r;
+    @Override
+    public void setHunger(int hunger) {
+        this.hunger = hunger;
     }
 
-    public int getEx() {
-        return ex;
+    @Override
+    public int getRest() {
+        return rest;
     }
 
-    public void setEx(int ex) {
-        this.ex = ex;
+    @Override
+    public void setRest(int rest) {
+        this.rest = rest;
+    }
+
+    @Override
+    public int getExcitement() {
+        return excitement;
+    }
+
+    @Override
+    public void setExcitement(int excitement) {
+        this.excitement = excitement;
+    }
+
+    @Override
+    public int getAppeal() {
+        return appeal;
+    }
+
+    @Override
+    public void setAppeal(int appeal) {
+        this.appeal = appeal;
+    }
+
+    @Override
+    public int getMoney() {
+        return money;
+    }
+
+    @Override
+    public void setMoney(int money) {
+        this.money = money;
+    }
+
+    @Override
+    public float getStudyingProcess() {
+        return studyingProcess;
+    }
+
+    @Override
+    public void setStudyingProcess(float studyingProcess) {
+        this.studyingProcess = studyingProcess;
+    }
+
+    @Override
+    public float getFitness() {
+        return fitness;
+    }
+
+    @Override
+    public void setFitness(float fitness) {
+        this.fitness = fitness;
     }
 
     public String toString() {

@@ -6,10 +6,10 @@ import utils.Time;
 import java.io.IOException;
 
 public class Adventure {
+
     private Time time = new Time();
     public void start() throws IOException {
         System.out.print("Hi, " + new Hero().getName() + "!\nYou can read, sleep, eat, work, study, enjoy, wash, train yourself and go date a girl.\n");
-        welcome();
     }
     //    while (true)
     public void welcome(){
@@ -17,17 +17,6 @@ public class Adventure {
     }
 
 /*
-            //if hero is asked to read
-            if ("read".equals(str.toLowerCase())) {
-                BookList bookList = new BookList();
-                System.out.print("\n");
-                bookList.showBookList();
-                BookSwitcher.switcher(br.readLine());
-                System.out.print("\n");
-                String s = "Reading a books...";
-                String f = "You are now smarter!";
-                Printer.p(s, f);
-            }
 
             if ("sleep".equals(str.toLowerCase())) {
                 String s = "Sleeping...";

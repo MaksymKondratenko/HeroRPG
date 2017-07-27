@@ -40,7 +40,7 @@
     <bean id="press" class="body.Press">
         <property name="hunger" value="-10"/>
         <property name="rest" value="-15"/>
-        <property name="excitement" value="-5"/>
+        <property name="excitement" value="5"/>
         <property name="money" value="-1"/>
         <property name="fitness" value="0.05f"/>
     </bean>

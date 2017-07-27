@@ -23,7 +23,7 @@
         <property name="fitness" value="-0.05f"/>
     </bean>
     <bean id="pizza" class="food.Pizza">
-        <property name="money" value="-3"/>
+        <property name="money" value="-4"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="50"/>
         <property name="excitement" value="3"/>

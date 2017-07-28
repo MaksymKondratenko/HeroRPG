@@ -1,11 +1,10 @@
 package books;
 
 import hero.Level;
-import utils.Time;
 
 public class Economics extends Book {
     private String info = "What did mr. Samuelsson said?";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -27,11 +26,11 @@ public class Economics extends Book {
         this.info = info;
     }
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

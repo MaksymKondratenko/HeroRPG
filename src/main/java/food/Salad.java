@@ -1,11 +1,10 @@
 package food;
 
 import hero.Level;
-import utils.Time;
 
 public class Salad extends Food {
     private String info = "Eat me, get fit!";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -27,11 +26,11 @@ public class Salad extends Food {
         this.info = info;
     }
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

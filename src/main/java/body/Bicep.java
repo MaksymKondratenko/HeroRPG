@@ -1,11 +1,10 @@
 package body;
 
 import hero.Level;
-import utils.Time;
 
 public class Bicep extends Body {
     private String name = "Nice pillow for your head.";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -35,11 +34,11 @@ public class Bicep extends Body {
         this.name = name;
     }
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

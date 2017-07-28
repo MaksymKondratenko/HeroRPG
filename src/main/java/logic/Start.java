@@ -39,7 +39,8 @@ public class Start {
             } else if (action instanceof washing.Washing) {
                 processor.process(action, hero);
                 printer.printAppeal(hero, action);
-            }
+            } else if (action instanceof utils.Exit)
+                break;
 
         }
     }

@@ -10,18 +10,23 @@
 
     <bean id="wash" class="washing.Washing" depends-on="washLister"/>
     <bean id="bath" class="washing.Bath">
+        <property name="time" value="#{time.addTime(30)}"/>
         <property name="appeal" value="3"/>
     </bean>
     <bean id="hair" class="washing.Hair">
+        <property name="time" value="#{time.addTime(15)}"/>
         <property name="appeal" value="1"/>
     </bean>
     <bean id="nails" class="washing.Nails">
+        <property name="time" value="#{time.addTime(15)}"/>
         <property name="appeal" value="1"/>
     </bean>
     <bean id="shower" class="washing.Shower">
+        <property name="time" value="#{time.addTime(30)}"/>
         <property name="appeal" value="2"/>
     </bean>
     <bean id="teeth" class="washing.Teeth">
+        <property name="time" value="#{time.addTime(15)}"/>
         <property name="appeal" value="1"/>
     </bean>
     <bean id="washLister" class="washing.WashLister" init-method="showWashList" scope="prototype">

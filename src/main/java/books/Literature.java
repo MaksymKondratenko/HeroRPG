@@ -1,11 +1,10 @@
 package books;
 
 import hero.Level;
-import utils.Time;
 
 public class Literature extends Book {
     private String info = "To be or not to be... What is the question!";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -27,11 +26,11 @@ public class Literature extends Book {
         this.info = info;
     }
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

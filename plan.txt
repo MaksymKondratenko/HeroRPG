@@ -1,8 +1,3 @@
 To do list:
-1) add some SpEL to get rid of ActionProcessor class;
-2) implement dating;
-3) add time show option;
-4) change time fields in subclasses of Action to int;
-5) inject time properties into beans of Action subclasses;
-6) add an ability to exit;
-7) add '+' for positive delta stats.
+1) implement dating;
+2) fix time showing option;

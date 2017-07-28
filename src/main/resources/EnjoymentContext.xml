@@ -9,6 +9,7 @@
 >
     <bean id="enjoy" class="enjoyment.Enjoyment" depends-on="enjoymentLister" scope="prototype"/>
     <bean id="cinema" class="enjoyment.Cinema">
+        <property name="time" value="#{time.addTime(120)}"/>
         <property name="money" value="-2"/>
         <property name="xp" value="6"/>
         <property name="hunger" value="-8"/>
@@ -16,18 +17,21 @@
         <property name="excitement" value="30"/>
     </bean>
     <bean id="dance" class="enjoyment.Dance">
+        <property name="time" value="#{time.addTime(30)}"/>
         <property name="xp" value="1"/>
         <property name="hunger" value="-10"/>
         <property name="rest" value="5"/>
         <property name="excitement" value="30"/>
     </bean>
     <bean id="skate" class="enjoyment.Skate">
+        <property name="time" value="#{time.addTime(30)}"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="-15"/>
         <property name="rest" value="10"/>
         <property name="excitement" value="25"/>
     </bean>
     <bean id="theater" class="enjoyment.Theater">
+        <property name="time" value="#{time.addTime(180)}"/>
         <property name="money" value="-3"/>
         <property name="xp" value="4"/>
         <property name="hunger" value="-5"/>
@@ -35,6 +39,7 @@
         <property name="excitement" value="40"/>
     </bean>
     <bean id="tv" class="enjoyment.TV">
+        <property name="time" value="#{time.addTime(150)}"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="-2"/>
         <property name="rest" value="10"/>

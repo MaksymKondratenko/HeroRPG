@@ -26,6 +26,7 @@
     <bean id="printer" class="utils.Printer"/>
     <bean id="time" class="utils.Time"/>
     <bean id="help" class="utils.Help" init-method="showInfo" scope="prototype"/>
+    <bean id="exit" class="utils.Exit"/>
 
     <bean id="actionProcessor" class="logic.ActionProcessor"/>
 

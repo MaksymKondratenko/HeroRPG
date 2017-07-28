@@ -1,11 +1,10 @@
 package body;
 
 import hero.Level;
-import utils.Time;
 
 public class Legs extends Body {
     private String name = "Run, Forrest, run!.";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -16,11 +15,11 @@ public class Legs extends Body {
     private float studyingProcess;
     private float fitness;
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

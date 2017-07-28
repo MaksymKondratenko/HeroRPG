@@ -9,6 +9,7 @@
 >
     <bean id="eat" class="food.Food"  depends-on="foodLister"/>
     <bean id="burger" class="food.Burger">
+        <property name="time" value="#{time.addTime(15)}"/>
         <property name="money" value="-1"/>
         <property name="xp" value="1"/>
         <property name="hunger" value="30"/>
@@ -16,6 +17,7 @@
         <property name="fitness" value="-0.05f"/>
     </bean>
     <bean id="cake" class="food.Cake">
+        <property name="time" value="#{time.addTime(30)}"/>
         <property name="money" value="-3"/>
         <property name="xp" value="3"/>
         <property name="hunger" value="40"/>
@@ -23,6 +25,7 @@
         <property name="fitness" value="-0.05f"/>
     </bean>
     <bean id="pizza" class="food.Pizza">
+        <property name="time" value="#{time.addTime(45)}"/>
         <property name="money" value="-4"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="50"/>
@@ -30,6 +33,7 @@
         <property name="fitness" value="-0.02f"/>
     </bean>
     <bean id="salad" class="food.Salad">
+        <property name="time" value="#{time.addTime(15)}"/>
         <property name="money" value="-2"/>
         <property name="xp" value="1"/>
         <property name="hunger" value="10"/>
@@ -37,6 +41,7 @@
         <property name="fitness" value="0.05f"/>
     </bean>
     <bean id="soup" class="food.Soup">
+        <property name="time" value="#{time.addTime(30)}"/>
         <property name="money" value="-1"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="25"/>

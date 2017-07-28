@@ -1,12 +1,11 @@
 package enjoyment;
 
 import hero.Level;
-import utils.Time;
 
 public class TV extends Enjoyment{
     private String id = "Watch TV";
     private String info = "Watch TV to get stupid.";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -36,11 +35,11 @@ public class TV extends Enjoyment{
         this.info = info;
     }
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

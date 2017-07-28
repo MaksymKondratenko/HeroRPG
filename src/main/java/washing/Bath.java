@@ -1,12 +1,11 @@
 package washing;
 
 import hero.Level;
-import utils.Time;
 
 public class Bath extends Washing {
     private String id = "Take a bath";
     private String info = "Better to use a salt bomb.";
-    private Time time;
+    private int time;
     private int xp;
     private Level level;
     private int hunger;
@@ -36,11 +35,11 @@ public class Bath extends Washing {
         this.info = info;
     }
 
-    public Time getTime() {
+    public int getTime() {
         return time;
     }
 
-    public void setTime(Time time) {
+    public void setTime(int time) {
         this.time = time;
     }
 

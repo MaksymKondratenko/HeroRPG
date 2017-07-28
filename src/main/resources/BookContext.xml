@@ -10,42 +10,49 @@
 
     <bean id="read" class="books.Book" depends-on="bookLister" scope="prototype"/>
     <bean id="arts" class="books.Arts">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="1"/>
         <property name="hunger" value="-1"/>
         <property name="rest" value="1"/>
         <property name="excitement" value="3"/>
     </bean>
     <bean id="business" class="books.Business">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="-3"/>
         <property name="rest" value="-3"/>
         <property name="excitement" value="-1"/>
     </bean>
     <bean id="economics" class="books.Economics">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="1"/>
         <property name="hunger" value="-2"/>
         <property name="rest" value="-2"/>
         <property name="excitement" value="-1"/>
     </bean>
     <bean id="law" class="books.Law">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="-3"/>
         <property name="rest" value="-3"/>
         <property name="excitement" value="-3"/>
     </bean>
     <bean id="literature" class="books.Literature">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="1"/>
         <property name="hunger" value="-1"/>
         <property name="rest" value="-1"/>
         <property name="excitement" value="2"/>
     </bean>
     <bean id="programming" class="books.Programming">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="-2"/>
         <property name="rest" value="-3"/>
         <property name="excitement" value="-2"/>
     </bean>
     <bean id="psychology" class="books.Psychology">
+        <property name="time" value="#{time.addTime(60)}"/>
         <property name="xp" value="2"/>
         <property name="hunger" value="-2"/>
         <property name="rest" value="-3"/>

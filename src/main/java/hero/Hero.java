@@ -16,7 +16,9 @@ public class Hero {
     private float fitness = 0.0f;
     private Level level = new Level();
 
-    public Hero () {}
+    public Hero() {
+    }
+
     public Hero(String name) {
         this.name = name;
     }
@@ -100,21 +102,4 @@ public class Hero {
     public void setName(String name) {
         this.name = name;
     }
-
-
-
-
-    /*
-
-        public static void date() throws IOException {
-        time.addTime(120);
-
-        System.out.println("You are going to hunt a new chick. Who'd be next?");
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Girl girl = new Girl(br.readLine());
-        if (girl.lucky.nextInt(2) == 1)
-            System.out.println("You've found a couple! Her name is "+ girl.name);
-        else
-            System.out.println("Not your time, bro.");
-    }*/
 }

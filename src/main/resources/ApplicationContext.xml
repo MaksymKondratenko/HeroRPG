@@ -16,16 +16,18 @@
     <import resource="ActivitiesContext.xml"/>
 
     <bean id="adventure" class="adventure.Adventure" depends-on="hero" init-method="start"/>
+
     <bean id="hero" class="hero.Hero"
           c:name="Sir"/>
-
     <bean id="girl" class="hero.Girl"/>
 
     <bean id="level" class="hero.Level"/>
 
     <bean id="printer" class="utils.Printer"/>
-    <bean id="time" class="utils.Time"/>
+    <bean name="time" class="utils.Time"/>
     <bean id="help" class="utils.Help" init-method="showInfo" scope="prototype"/>
+    <bean id="date" class="activities.Date"  scope="prototype" depends-on="girl" init-method="date"
+          p:girl-ref="girl"/>
     <bean id="exit" class="utils.Exit"/>
 
     <bean id="actionProcessor" class="logic.ActionProcessor"/>

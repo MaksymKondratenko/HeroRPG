@@ -12,11 +12,6 @@ public class Girl {
     public Girl() {
     }
 
-    Girl(String name){
-        this.name = name;
-        this.lucky = new Random();
-    }
-
     public String getName() {
         return name;
     }

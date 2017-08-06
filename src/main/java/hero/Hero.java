@@ -1,5 +1,7 @@
 package hero;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created by Maksym on 14.02.2017.
  */
@@ -16,10 +18,11 @@ public class Hero {
     private float fitness = 0.0f;
     private Level level = new Level();
 
+    @Autowired
     public Hero() {
     }
 
-    public Hero(String name) {
+    public Hero( String name) {
         this.name = name;
     }
 
@@ -27,6 +30,7 @@ public class Hero {
         return xp;
     }
 
+    @Autowired
     public void setXp(int xp) {
         this.xp = xp;
     }
@@ -35,6 +39,7 @@ public class Hero {
         return hunger;
     }
 
+    @Autowired
     public void setHunger(int hunger) {
         this.hunger = hunger;
     }
@@ -43,6 +48,7 @@ public class Hero {
         return rest;
     }
 
+    @Autowired
     public void setRest(int rest) {
         this.rest = rest;
     }
@@ -51,6 +57,7 @@ public class Hero {
         return excitement;
     }
 
+    @Autowired
     public void setExcitement(int excitement) {
         this.excitement = excitement;
     }
@@ -59,6 +66,7 @@ public class Hero {
         return appeal;
     }
 
+    @Autowired
     public void setAppeal(int appeal) {
         this.appeal = appeal;
     }
@@ -67,6 +75,7 @@ public class Hero {
         return money;
     }
 
+    @Autowired
     public void setMoney(int money) {
         this.money = money;
     }
@@ -75,6 +84,7 @@ public class Hero {
         return studyingProcess;
     }
 
+    @Autowired
     public void setStudyingProcess(float studyingProcess) {
         this.studyingProcess = studyingProcess;
     }
@@ -83,6 +93,7 @@ public class Hero {
         return fitness;
     }
 
+    @Autowired
     public void setFitness(float fitness) {
         this.fitness = fitness;
     }
@@ -91,6 +102,7 @@ public class Hero {
         return level;
     }
 
+    @Autowired
     public void setLevel(Level level) {
         this.level = level;
     }
@@ -99,6 +111,7 @@ public class Hero {
         return name;
     }
 
+    @Autowired
     public void setName(String name) {
         this.name = name;
     }

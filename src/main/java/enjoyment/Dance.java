@@ -2,7 +2,9 @@ package enjoyment;
 
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Dance extends Enjoyment{
     private String info = "I'd like to move it, move it...";
     private int time;

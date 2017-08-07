@@ -1,14 +1,22 @@
 package books;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Economics extends Book {
     private String info = "What did mr. Samuelsson said?";
+    @Value("#{time.addTime(60)}")
     private int time;
+    @Value("1")
     private int xp;
     private Level level;
+    @Value("-2")
     private int hunger;
+    @Value("-2")
     private int rest;
+    @Value("-1")
     private int excitement;
     private int appeal;
     private int money;

@@ -1,7 +1,9 @@
 package washing;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Nails extends Washing {
     private String id = "Cut nails";
     private String info = "Time to cut your cat nails!";

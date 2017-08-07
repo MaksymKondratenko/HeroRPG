@@ -1,10 +1,11 @@
 package logic;
 
 import adventure.Adventure;
+import config.AnnotationConfig;
 import hero.Action;
 import hero.Hero;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import utils.Printer;
 import utils.Time;
 
@@ -17,12 +18,12 @@ import java.io.InputStreamReader;
  */
 public class Start {
     public static void main(String[] args) throws Exception {
-        ApplicationContext context = new ClassPathXmlApplicationContext("ApplicationContext.xml");
-        Adventure adventure = (Adventure) context.getBean("adventure");
-        Hero hero = (Hero)context.getBean("hero");
-        ActionProcessor processor = (ActionProcessor)context.getBean("actionProcessor");
-        Printer printer = (Printer) context.getBean("printer");
-        Time time = (Time) context.getBean("time");
+        ApplicationContext context = new AnnotationConfigApplicationContext(AnnotationConfig.class);
+        Adventure adventure = context.getBean(Adventure.class);
+        Hero hero = context.getBean(Hero.class);
+        ActionProcessor processor = context.getBean(ActionProcessor.class);
+        Printer printer = context.getBean(Printer.class);
+        Time time = context.getBean(Time.class);
 
         while(true) {
             adventure.welcome();

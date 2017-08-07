@@ -1,7 +1,9 @@
 package body;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Legs extends Body {
     private String name = "Run, Forrest, run!.";
     private int time;

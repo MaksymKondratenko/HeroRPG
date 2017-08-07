@@ -1,10 +1,12 @@
 package hero;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Maksym on 14.02.2017.
  */
+@Component
 public class Hero {
     private static Hero singleHero;
     private String name = "Sir Lancelot";

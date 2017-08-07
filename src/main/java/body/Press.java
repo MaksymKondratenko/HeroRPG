@@ -1,7 +1,9 @@
 package body;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Press extends Body {
     private String name = "Crush all received punches for ease.";
     private int time;

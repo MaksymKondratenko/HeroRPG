@@ -1,14 +1,22 @@
 package books;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Literature extends Book {
     private String info = "To be or not to be... What is the question!";
+    @Value("#{time.addTime(60)}")
     private int time;
+    @Value("1")
     private int xp;
     private Level level;
+    @Value("-1")
     private int hunger;
+    @Value("-1")
     private int rest;
+    @Value("2")
     private int excitement;
     private int appeal;
     private int money;

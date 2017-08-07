@@ -1,7 +1,9 @@
 package enjoyment;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TV extends Enjoyment{
     private String id = "Watch TV";
     private String info = "Watch TV to get stupid.";

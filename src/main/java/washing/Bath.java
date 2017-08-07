@@ -1,7 +1,9 @@
 package washing;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Bath extends Washing {
     private String id = "Take a bath";
     private String info = "Better to use a salt bomb.";

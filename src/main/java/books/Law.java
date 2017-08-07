@@ -1,14 +1,22 @@
 package books;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Law extends Book {
     private String info = "How to be true in every situation?";
+    @Value("#{time.addTime(60)}")
     private int time;
+    @Value("2")
     private int xp;
     private Level level;
+    @Value("-3")
     private int hunger;
+    @Value("-3")
     private int rest;
+    @Value("-3")
     private int excitement;
     private int appeal;
     private int money;

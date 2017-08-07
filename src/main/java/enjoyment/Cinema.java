@@ -1,7 +1,9 @@
 package enjoyment;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Cinema extends Enjoyment{
     private String info = "What movie is on screen now?";
     private int time;

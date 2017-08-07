@@ -1,8 +1,8 @@
 package body;
 
 import hero.Level;
-import utils.Time;
-
+import org.springframework.stereotype.Component;
+@Component
 public class Back extends Body {
     private String name = "Have a wall behind.";
     private int time;

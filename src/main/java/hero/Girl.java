@@ -1,10 +1,13 @@
 package hero;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
 /**
  * Created by Maksym on 17.02.2017.
  */
+@Component
 public class Girl {
     private String name;
     private Random lucky;

@@ -1,7 +1,9 @@
 package food;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Cake extends Food{
     private String info = "Delicious way to spend your life!";
     private int time;

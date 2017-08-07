@@ -2,12 +2,18 @@ package activities;
 
 import hero.Action;
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Dream extends Action {
+    @Value("#{time.addTime(360)}")
     private int time;
     private int xp;
     private Level level;
+    @Value("-5")
     private int hunger;
+    @Value("50")
     private int rest;
     private int excitement;
     private int appeal;

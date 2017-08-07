@@ -1,7 +1,9 @@
 package body;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Neck extends Body {
     private String name = "Vital for keeping your head straight.";
     private int time;

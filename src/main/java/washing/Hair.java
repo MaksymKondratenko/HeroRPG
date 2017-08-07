@@ -1,7 +1,9 @@
 package washing;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Hair extends Washing {
     private String id = "Grass hair";
     private String info = "Stylish look!";

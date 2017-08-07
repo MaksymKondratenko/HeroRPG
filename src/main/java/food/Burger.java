@@ -1,7 +1,9 @@
 package food;
 
 import hero.Level;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Burger extends Food {
     private String info = "The fastest way to get TTT!";
     private int time;

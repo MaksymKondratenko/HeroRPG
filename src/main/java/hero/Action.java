@@ -1,5 +1,8 @@
 package hero;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public abstract class Action {
     private int xp = 0;
     private int hunger = 0;

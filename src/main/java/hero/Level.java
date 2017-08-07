@@ -1,8 +1,11 @@
 package hero;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Maksym on 17.02.2017.
  */
+@Component
 public class Level {
     int lvl = 1;
 

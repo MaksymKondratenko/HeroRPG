@@ -1,6 +1,7 @@
 package food;
 
 import hero.Action;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class FoodLister {
         System.out.println("\n");
     }
 
-    public void setFoodList(ArrayList<Action> foodList) {
+    public void setFoodList(@Value("{Burger.class, Cake.class, Pizza.class, Salad.class, Soup.class}") ArrayList<Action> foodList) {
         this.foodList = foodList;
     }
 

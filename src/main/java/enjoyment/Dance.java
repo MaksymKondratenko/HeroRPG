@@ -2,16 +2,22 @@ package enjoyment;
 
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Dance extends Enjoyment{
     private String info = "I'd like to move it, move it...";
+    @Value("#{time.addTime(30)")
     private int time;
+    @Value("1")
     private int xp;
     private Level level;
+    @Value("-10")
     private int hunger;
+    @Value("5")
     private int rest;
+    @Value("30")
     private int excitement;
     private int appeal;
     private int money;

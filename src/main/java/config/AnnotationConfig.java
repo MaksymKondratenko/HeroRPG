@@ -14,7 +14,7 @@ import utils.Time;
 
 @Configuration
 @Lazy
-@Import({ActivitiesConfig.class, BookConfig.class})
+@Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class})
 public class AnnotationConfig {
 
     @Bean

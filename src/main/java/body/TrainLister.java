@@ -1,6 +1,7 @@
 package body;
 
 import hero.Action;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class TrainLister {
         System.out.println("\n");
     }
 
-    public void setTrainList(ArrayList<Action> trainList) {
+    public void setTrainList(@Value("{Back.class, Bicep.class, Legs.class, Neck.class, Press.class}") ArrayList<Action> trainList) {
         this.trainList = trainList;
     }
 }

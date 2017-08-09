@@ -1,6 +1,7 @@
 package enjoyment;
 
 import hero.Action;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class EnjoymentLister {
     }
 
 
-    public void setEnjoymentList(ArrayList<Action> enjoyList) {
+    public void setEnjoymentList(@Value("{Cinema.class, Dance.class, Enjoyment.class, Skate.class, Theater.class, TV.class}") ArrayList<Action> enjoyList) {
         this.enjoymentList = enjoyList;
     }
 }

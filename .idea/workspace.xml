@@ -46,8 +46,8 @@
       <file leaf-file-name="ActivitiesConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/config/ActivitiesConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+            <state relative-caret-position="459">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding>
                 <element signature="e#645#646#0" expanded="true" />
                 <element signature="e#678#679#0" expanded="true" />
@@ -201,6 +201,11 @@
             <path>
               <item name="mine" type="b2602c69:ProjectViewProjectNode" />
               <item name="mine" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="mine" type="b2602c69:ProjectViewProjectNode" />
+              <item name="mine" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="mine" type="b2602c69:ProjectViewProjectNode" />
@@ -1141,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/config/ActivitiesConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        <state relative-caret-position="459">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
           <folding>
             <element signature="e#645#646#0" expanded="true" />
             <element signature="e#678#679#0" expanded="true" />

@@ -7,70 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9bd2023-f244-4297-b6a0-89ccaa37a3ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/mine_jar3/mine.jar" afterPath="$PROJECT_DIR$/out/artifacts/mine_jar3/mine.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/activities/Date.class" afterPath="$PROJECT_DIR$/target/classes/activities/Date.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/activities/Dream.class" afterPath="$PROJECT_DIR$/target/classes/activities/Dream.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/activities/Study.class" afterPath="$PROJECT_DIR$/target/classes/activities/Study.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/activities/Work.class" afterPath="$PROJECT_DIR$/target/classes/activities/Work.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/adventure/Adventure.class" afterPath="$PROJECT_DIR$/target/classes/adventure/Adventure.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/Back.class" afterPath="$PROJECT_DIR$/target/classes/body/Back.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/Bicep.class" afterPath="$PROJECT_DIR$/target/classes/body/Bicep.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/Body.class" afterPath="$PROJECT_DIR$/target/classes/body/Body.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/Legs.class" afterPath="$PROJECT_DIR$/target/classes/body/Legs.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/Neck.class" afterPath="$PROJECT_DIR$/target/classes/body/Neck.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/Press.class" afterPath="$PROJECT_DIR$/target/classes/body/Press.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/body/TrainLister.class" afterPath="$PROJECT_DIR$/target/classes/body/TrainLister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Arts.class" afterPath="$PROJECT_DIR$/target/classes/books/Arts.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Book.class" afterPath="$PROJECT_DIR$/target/classes/books/Book.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/BookLister.class" afterPath="$PROJECT_DIR$/target/classes/books/BookLister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Business.class" afterPath="$PROJECT_DIR$/target/classes/books/Business.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Economics.class" afterPath="$PROJECT_DIR$/target/classes/books/Economics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Law.class" afterPath="$PROJECT_DIR$/target/classes/books/Law.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Literature.class" afterPath="$PROJECT_DIR$/target/classes/books/Literature.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Programming.class" afterPath="$PROJECT_DIR$/target/classes/books/Programming.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/books/Psychology.class" afterPath="$PROJECT_DIR$/target/classes/books/Psychology.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/ActivitiesConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/ActivitiesConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/AnnotationConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/AnnotationConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/BookConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/BookConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/EnjoymentConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/EnjoymentConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/FoodConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/FoodConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/TrainConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/TrainConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config/WashingConfig.class" afterPath="$PROJECT_DIR$/target/classes/config/WashingConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/Cinema.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/Cinema.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/Dance.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/Dance.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/Enjoyment.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/Enjoyment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/EnjoymentLister.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/EnjoymentLister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/Skate.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/Skate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/TV.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/TV.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/enjoyment/Theater.class" afterPath="$PROJECT_DIR$/target/classes/enjoyment/Theater.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/Burger.class" afterPath="$PROJECT_DIR$/target/classes/food/Burger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/Cake.class" afterPath="$PROJECT_DIR$/target/classes/food/Cake.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/Food.class" afterPath="$PROJECT_DIR$/target/classes/food/Food.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/FoodLister.class" afterPath="$PROJECT_DIR$/target/classes/food/FoodLister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/Pizza.class" afterPath="$PROJECT_DIR$/target/classes/food/Pizza.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/Salad.class" afterPath="$PROJECT_DIR$/target/classes/food/Salad.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/food/Soup.class" afterPath="$PROJECT_DIR$/target/classes/food/Soup.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hero/Action.class" afterPath="$PROJECT_DIR$/target/classes/hero/Action.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hero/Girl.class" afterPath="$PROJECT_DIR$/target/classes/hero/Girl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hero/Hero.class" afterPath="$PROJECT_DIR$/target/classes/hero/Hero.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/hero/Level.class" afterPath="$PROJECT_DIR$/target/classes/hero/Level.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/logic/ActionProcessor.class" afterPath="$PROJECT_DIR$/target/classes/logic/ActionProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/logic/Start.class" afterPath="$PROJECT_DIR$/target/classes/logic/Start.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Exit.class" afterPath="$PROJECT_DIR$/target/classes/utils/Exit.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Help.class" afterPath="$PROJECT_DIR$/target/classes/utils/Help.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Printer.class" afterPath="$PROJECT_DIR$/target/classes/utils/Printer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/utils/Time.class" afterPath="$PROJECT_DIR$/target/classes/utils/Time.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/Bath.class" afterPath="$PROJECT_DIR$/target/classes/washing/Bath.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/Hair.class" afterPath="$PROJECT_DIR$/target/classes/washing/Hair.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/Nails.class" afterPath="$PROJECT_DIR$/target/classes/washing/Nails.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/Shower.class" afterPath="$PROJECT_DIR$/target/classes/washing/Shower.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/Teeth.class" afterPath="$PROJECT_DIR$/target/classes/washing/Teeth.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/WashLister.class" afterPath="$PROJECT_DIR$/target/classes/washing/WashLister.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/washing/Washing.class" afterPath="$PROJECT_DIR$/target/classes/washing/Washing.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mine.iml" afterPath="$PROJECT_DIR$/mine.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="mine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -711,6 +648,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -722,7 +660,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.4942717" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8477905" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.9230769" sideWeight="0.49092284" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9230769" sideWeight="0.49092284" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19213313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />

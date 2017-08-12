@@ -11,6 +11,9 @@ import java.util.Random;
 @Component
 public class Date extends Action {
     Girl girl;
+    public Date(Girl girl){
+        this.girl = girl;
+    }
 
     public void date() throws IOException {
         System.out.println("You are going to hunt a new chick. Who'd be next? (Tip: type her name.)");

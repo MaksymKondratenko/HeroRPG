@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class TV extends Enjoyment{
     private String id = "Watch TV";
     private String info = "Watch TV to get stupid.";
-    @Value("#{time.addTime(150)")
+    @Value("#{time.addTime(150)}")
     private int time;
     @Value("2")
     private int xp;

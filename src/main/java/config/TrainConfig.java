@@ -1,21 +1,25 @@
 package config;
 
 import body.*;
+import hero.Action;
 import org.springframework.context.annotation.*;
+
+import java.util.ArrayList;
 
 @Configuration
 @Lazy
 public class TrainConfig {
     @Bean(initMethod = "showTrainList")
+    @DependsOn("trainList")
     @Scope("prototype")
     public TrainLister trainLister(){
-        return new TrainLister();
+        return new TrainLister(trainList());
     }
 
     @Bean
     @DependsOn("trainLister")
     @Scope("prototype")
-    public Body body(){
+    public Body train(){
         return new Body();
     }
 
@@ -42,5 +46,16 @@ public class TrainConfig {
     @Bean
     public Press press(){
         return new Press();
+    }
+
+    @Bean
+    public ArrayList<Action> trainList(){
+        ArrayList<Action> list = new ArrayList<>();
+        list.add(new Back());
+        list.add(new Bicep());
+        list.add(new Legs());
+        list.add(new Neck());
+        list.add(new Press());
+        return list;
     }
 }

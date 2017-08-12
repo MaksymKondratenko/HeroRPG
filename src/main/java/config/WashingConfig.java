@@ -1,10 +1,10 @@
 package config;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.context.annotation.Lazy;
+import hero.Action;
+import org.springframework.context.annotation.*;
 import washing.*;
+
+import java.util.ArrayList;
 
 @Configuration
 @Lazy
@@ -18,6 +18,11 @@ public class WashingConfig {
     @Bean
     public Bath bath(){
         return new Bath();
+    }
+
+    @Bean
+    public Hair hair(){
+        return new Hair();
     }
 
     @Bean
@@ -36,7 +41,20 @@ public class WashingConfig {
     }
 
     @Bean(initMethod = "showWashList")
+    @DependsOn("washList")
+    @Scope("prototype")
     public WashLister washLister(){
-        return new WashLister();
+        return new WashLister(washList());
+    }
+
+    @Bean
+    public ArrayList<Action> washList(){
+        ArrayList<Action> list = new ArrayList<>();
+        list.add(new Bath());
+        list.add(new Hair());
+        list.add(new Nails());
+        list.add(new Shower());
+        list.add(new Teeth());
+        return list;
     }
 }

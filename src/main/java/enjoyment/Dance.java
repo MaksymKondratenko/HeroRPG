@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Dance extends Enjoyment{
     private String info = "I'd like to move it, move it...";
-    @Value("#{time.addTime(30)")
+    @Value("#{time.addTime(30)}")
     private int time;
     @Value("1")
     private int xp;

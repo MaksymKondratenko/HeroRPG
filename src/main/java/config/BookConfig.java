@@ -1,15 +1,19 @@
 package config;
 
 import books.*;
+import hero.Action;
 import org.springframework.context.annotation.*;
+
+import java.util.ArrayList;
 
 @Configuration
 @Lazy
 public class BookConfig {
-    @Bean(initMethod = "showBookList")
+    @Bean
+    @DependsOn("bookList")
     @Scope("prototype")
     public BookLister bookLister(){
-        return new BookLister();
+        return new BookLister(bookList());
     }
 
     @Bean
@@ -52,5 +56,18 @@ public class BookConfig {
     @Bean
     public Psychology psychology(){
         return new Psychology();
+    }
+
+    @Bean
+    public ArrayList<Action> bookList(){
+        ArrayList<Action> list = new ArrayList<>();
+        list.add(new Arts());
+        list.add(new Business());
+        list.add(new Economics());
+        list.add(new Law());
+        list.add(new Literature());
+        list.add(new Programming());
+        list.add(new Psychology());
+        return list;
     }
 }

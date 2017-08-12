@@ -1,8 +1,6 @@
 package config;
 
-import activities.Date;
 import adventure.Adventure;
-import hero.Girl;
 import hero.Hero;
 import hero.Level;
 import logic.ActionProcessor;
@@ -30,11 +28,6 @@ public class AnnotationConfig {
     }
 
     @Bean
-    public Girl girl() {
-        return new Girl();
-    }
-
-    @Bean
     public Level level(){
         return new Level();
     }
@@ -53,13 +46,6 @@ public class AnnotationConfig {
     @Scope("prototype")
     public Help help() {
         return new Help();
-    }
-
-    @Bean(initMethod = "date")
-    @Scope("prototype")
-    @DependsOn("girl")
-    public Date date(){
-        return new Date();
     }
 
     @Bean

@@ -1,15 +1,19 @@
 package config;
 
 import food.*;
+import hero.Action;
 import org.springframework.context.annotation.*;
+
+import java.util.ArrayList;
 
 @Configuration
 @Lazy
 public class FoodConfig {
     @Bean(initMethod = "showFoodList")
+    @DependsOn("foodList")
     @Scope("prototype")
     public FoodLister foodLister(){
-        return new FoodLister();
+        return new FoodLister(foodList());
     }
 
 
@@ -44,4 +48,14 @@ public class FoodConfig {
         return new Soup();
     }
 
+    @Bean
+    public ArrayList<Action> foodList(){
+        ArrayList<Action> list = new ArrayList<>();
+        list.add(new Burger());
+        list.add(new Cake());
+        list.add(new Pizza());
+        list.add(new Salad());
+        list.add(new Soup());
+        return list;
+    }
 }

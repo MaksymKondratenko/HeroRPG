@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Theater extends Enjoyment{
     private String info = "Go and develop yourself culturally!";
-    @Value("#{time.addTime(180)")
+    @Value("#{time.addTime(180)}")
     private int time;
     @Value("4")
     private int xp;

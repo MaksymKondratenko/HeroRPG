@@ -1,15 +1,17 @@
 package washing;
 
 import hero.Action;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 @Component
 public class WashLister {
-    private ArrayList<Action> washList = new ArrayList<Action>();
+    private ArrayList<Action> washList;
 
     public WashLister() {
+    }
+    public WashLister(ArrayList<Action> list){
+        washList = list;
     }
 
     public ArrayList<Action> getWashList(){
@@ -24,7 +26,7 @@ public class WashLister {
         System.out.println("\n");
     }
 
-    public void setWashList(@Value("{Bath.class, Hair.class, Nails.class, Shower.class, Teeth.class}") ArrayList<Action> washList) {
+    public void setWashList(ArrayList<Action> washList) {
         this.washList = washList;
     }
 }

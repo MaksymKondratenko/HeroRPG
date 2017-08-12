@@ -1,11 +1,11 @@
 package config;
 
+import activities.Date;
 import activities.Dream;
 import activities.Study;
 import activities.Work;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Lazy;
+import hero.Girl;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @Lazy
@@ -23,5 +23,18 @@ public class ActivitiesConfig {
     @Bean
     public Study study(){
         return new Study();
+    }
+
+    @Bean(initMethod = "date")
+    @Scope("prototype")
+    @DependsOn("girl")
+    public Date date(){
+        return new Date(girl());
+    }
+
+    @Bean
+    @Scope("prototype")
+    public Girl girl() {
+        return new Girl();
     }
 }

@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:util="http://springframework.org/schema/util"
-       xmlns:p="http://www.springframework.org/schema/p"
-       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-       default-lazy-init="true"
->
-
+       default-lazy-init="true">
+    <bean id="adventure" class="adventure.Adventure" depends-on="hero" init-method="start"/>
     <import resource="TrainContext.xml"/>
     <import resource="BookContext.xml"/>
     <import resource="EnjoymentContext.xml"/>
@@ -15,10 +11,9 @@
     <import resource="WashingContext.xml"/>
     <import resource="ActivitiesContext.xml"/>
 
-    <bean id="adventure" class="adventure.Adventure" depends-on="hero" init-method="start"/>
 
-    <bean id="hero" class="hero.Hero"
-          c:name="Sir"/>
+
+    <bean id="hero" class="hero.Hero"/>
     <bean id="girl" class="hero.Girl"/>
 
     <bean id="level" class="hero.Level"/>
@@ -26,8 +21,9 @@
     <bean id="printer" class="utils.Printer"/>
     <bean name="time" class="utils.Time"/>
     <bean id="help" class="utils.Help" init-method="showInfo" scope="prototype"/>
-    <bean id="date" class="activities.Date"  scope="prototype" depends-on="girl" init-method="date"
-          p:girl-ref="girl"/>
+    <bean id="date" class="activities.Date"  scope="prototype" depends-on="girl" init-method="date">
+        <property name="girl" ref="girl"/>
+    </bean>
     <bean id="exit" class="utils.Exit"/>
 
     <bean id="actionProcessor" class="logic.ActionProcessor"/>

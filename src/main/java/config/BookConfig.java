@@ -15,7 +15,7 @@ public class BookConfig {
     @Bean
     @DependsOn("bookLister")
     @Scope("prototype")
-    public Book book(){
+    public Book read(){
         return new Book();
     }
 

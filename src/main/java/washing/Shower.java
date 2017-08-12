@@ -1,18 +1,22 @@
 package washing;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Shower extends Washing {
     private String id = "Take a shower";
     private String info = "Fast food in bathing.";
+
+    @Value("#{time.addTime(30)}")
     private int time;
     private int xp;
     private Level level;
     private int hunger;
     private int rest;
     private int excitement;
+    @Value("2")
     private int appeal;
     private int money;
     private float studyingProcess;

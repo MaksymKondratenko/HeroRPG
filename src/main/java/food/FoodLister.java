@@ -10,7 +10,7 @@ public class FoodLister {
     public FoodLister() {
     }
 
-    public ArrayList<Action> foodList = new ArrayList<>();
+    public ArrayList<Action> foodList = new ArrayList<Action>();
 
     public ArrayList<Action> getFoodList(){
         return foodList;

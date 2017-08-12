@@ -6,10 +6,11 @@ import org.springframework.context.annotation.*;
 @Configuration
 @Lazy
 public class EnjoymentConfig {
-    @Bean(initMethod = "showEnjoymentList")
+    @Bean
     @Scope("prototype")
     public EnjoymentLister enjoymentLister() {
         return new EnjoymentLister();
+
     }
 
     @Bean

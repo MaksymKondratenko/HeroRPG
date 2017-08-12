@@ -14,10 +14,11 @@ import utils.Time;
 
 @Configuration
 @Lazy
-@Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class})
+@Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class})
 public class AnnotationConfig {
 
     @Bean
+    @DependsOn("level")
     public Hero hero(){
         return new Hero();
     }

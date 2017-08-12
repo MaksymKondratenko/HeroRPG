@@ -4,10 +4,12 @@ import hero.Action;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 @Component
 public class EnjoymentLister {
-    private ArrayList<Action> enjoymentList = new ArrayList<>();
+    @Value("${Cinema.class, Dance.class, Enjoyment.class, Skate.class, Theater.class, TV.class}")
+    private ArrayList<Action> enjoymentList;
 
     public EnjoymentLister() {
     }
@@ -16,6 +18,7 @@ public class EnjoymentLister {
         return enjoymentList;
     }
 
+    @PostConstruct
     public void showEnjoymentList() {
         getEnjoymentList();
         System.out.println("Choose and type, where to go to entertain yourself:");
@@ -25,7 +28,7 @@ public class EnjoymentLister {
     }
 
 
-    public void setEnjoymentList(@Value("{Cinema.class, Dance.class, Enjoyment.class, Skate.class, Theater.class, TV.class}") ArrayList<Action> enjoyList) {
+    public void setEnjoymentList(ArrayList<Action> enjoyList) {
         this.enjoymentList = enjoyList;
     }
 }

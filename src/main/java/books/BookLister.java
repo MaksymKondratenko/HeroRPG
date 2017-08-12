@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class BookLister {
     public BookLister() {
     }
-    private ArrayList<Action> bookList = new ArrayList<>();
+    private ArrayList<Action> bookList = new ArrayList<Action>();
 
     protected ArrayList<Action> getBookList (){
         return bookList;

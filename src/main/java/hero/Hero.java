@@ -1,6 +1,6 @@
 package hero;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
@@ -9,18 +9,27 @@ import org.springframework.stereotype.Component;
 @Component
 public class Hero {
     private static Hero singleHero;
-    private String name = "Sir Lancelot";
-    private int xp = 0;
-    private int hunger = 100;
-    private int rest = 100;
-    private int excitement = 100;
-    private int appeal = 0;
-    private int money = 10;
-    private float studyingProcess = 0.0f;
-    private float fitness = 0.0f;
+    @Value("Sir Lancelot")
+    private String name;
+    @Value("0")
+    private int xp;
+    @Value("100")
+    private int hunger;
+    @Value("100")
+    private int rest;
+    @Value("100")
+    private int excitement;
+    @Value("0")
+    private int appeal;
+    @Value("10")
+    private int money;
+    @Value("0.0f")
+    private float studyingProcess;
+    @Value("0.0f")
+    private float fitness;
     private Level level = new Level();
 
-    @Autowired
+
     public Hero() {
     }
 
@@ -32,7 +41,7 @@ public class Hero {
         return xp;
     }
 
-    @Autowired
+
     public void setXp(int xp) {
         this.xp = xp;
     }
@@ -41,7 +50,7 @@ public class Hero {
         return hunger;
     }
 
-    @Autowired
+
     public void setHunger(int hunger) {
         this.hunger = hunger;
     }
@@ -50,7 +59,7 @@ public class Hero {
         return rest;
     }
 
-    @Autowired
+
     public void setRest(int rest) {
         this.rest = rest;
     }
@@ -59,7 +68,7 @@ public class Hero {
         return excitement;
     }
 
-    @Autowired
+
     public void setExcitement(int excitement) {
         this.excitement = excitement;
     }
@@ -68,7 +77,7 @@ public class Hero {
         return appeal;
     }
 
-    @Autowired
+
     public void setAppeal(int appeal) {
         this.appeal = appeal;
     }
@@ -77,7 +86,7 @@ public class Hero {
         return money;
     }
 
-    @Autowired
+
     public void setMoney(int money) {
         this.money = money;
     }
@@ -86,7 +95,7 @@ public class Hero {
         return studyingProcess;
     }
 
-    @Autowired
+
     public void setStudyingProcess(float studyingProcess) {
         this.studyingProcess = studyingProcess;
     }
@@ -95,7 +104,7 @@ public class Hero {
         return fitness;
     }
 
-    @Autowired
+
     public void setFitness(float fitness) {
         this.fitness = fitness;
     }
@@ -104,7 +113,7 @@ public class Hero {
         return level;
     }
 
-    @Autowired
+
     public void setLevel(Level level) {
         this.level = level;
     }
@@ -113,7 +122,6 @@ public class Hero {
         return name;
     }
 
-    @Autowired
     public void setName(String name) {
         this.name = name;
     }

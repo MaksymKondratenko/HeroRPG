@@ -1,14 +1,16 @@
 package adventure;
 
 import hero.Hero;
+import org.springframework.stereotype.Component;
 import utils.Printer;
 import utils.Time;
 
 import java.io.IOException;
-
+@Component
 public class Adventure {
 
     private Time time = new Time();
+
     public void start() throws IOException {
         Printer printer = new Printer();
         printer.printLogo();

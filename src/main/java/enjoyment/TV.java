@@ -1,15 +1,23 @@
 package enjoyment;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class TV extends Enjoyment{
     private String id = "Watch TV";
     private String info = "Watch TV to get stupid.";
+    @Value("#{time.addTime(150)}")
     private int time;
+    @Value("2")
     private int xp;
     private Level level;
+    @Value("-2")
     private int hunger;
+    @Value("10")
     private int rest;
+    @Value("20")
     private int excitement;
     private int appeal;
     private int money;

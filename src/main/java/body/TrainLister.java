@@ -1,13 +1,17 @@
 package body;
 
 import hero.Action;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-
+@Component
 public class TrainLister {
-    private ArrayList<Action> trainList = new ArrayList<>();
+    private ArrayList<Action> trainList = new ArrayList<Action>();
 
     public TrainLister() {
+    }
+    public TrainLister(ArrayList<Action> list){
+        trainList = list;
     }
 
     public ArrayList<Action> getTrainList (){

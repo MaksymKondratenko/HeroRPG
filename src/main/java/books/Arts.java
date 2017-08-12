@@ -1,19 +1,28 @@
 package books;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Arts extends Book {
     private String info = "Life is Art. Naturally.";
+    @Value("#{time.addTime(60)}")
     private int time;
+    @Value("1")
     private int xp;
     private Level level;
+    @Value("-1")
     private int hunger;
+    @Value("1")
     private int rest;
+    @Value("3")
     private int excitement;
     private int appeal;
     private int money;
     private float studyingProcess;
     private float fitness;
+
     public Arts() {
     }
 

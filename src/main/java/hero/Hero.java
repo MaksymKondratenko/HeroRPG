@@ -1,31 +1,46 @@
 package hero;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Maksym on 14.02.2017.
  */
+@Component
 public class Hero {
     private static Hero singleHero;
-    private String name = "Sir Lancelot";
-    private int xp = 0;
-    private int hunger = 100;
-    private int rest = 100;
-    private int excitement = 100;
-    private int appeal = 0;
-    private int money = 10;
-    private float studyingProcess = 0.0f;
-    private float fitness = 0.0f;
+    @Value("Sir Lancelot")
+    private String name;
+    @Value("0")
+    private int xp;
+    @Value("100")
+    private int hunger;
+    @Value("100")
+    private int rest;
+    @Value("100")
+    private int excitement;
+    @Value("0")
+    private int appeal;
+    @Value("10")
+    private int money;
+    @Value("0.0f")
+    private float studyingProcess;
+    @Value("0.0f")
+    private float fitness;
     private Level level = new Level();
+
 
     public Hero() {
     }
 
-    public Hero(String name) {
+    public Hero( String name) {
         this.name = name;
     }
 
     public int getXp() {
         return xp;
     }
+
 
     public void setXp(int xp) {
         this.xp = xp;
@@ -35,6 +50,7 @@ public class Hero {
         return hunger;
     }
 
+
     public void setHunger(int hunger) {
         this.hunger = hunger;
     }
@@ -42,6 +58,7 @@ public class Hero {
     public int getRest() {
         return rest;
     }
+
 
     public void setRest(int rest) {
         this.rest = rest;
@@ -51,6 +68,7 @@ public class Hero {
         return excitement;
     }
 
+
     public void setExcitement(int excitement) {
         this.excitement = excitement;
     }
@@ -58,6 +76,7 @@ public class Hero {
     public int getAppeal() {
         return appeal;
     }
+
 
     public void setAppeal(int appeal) {
         this.appeal = appeal;
@@ -67,6 +86,7 @@ public class Hero {
         return money;
     }
 
+
     public void setMoney(int money) {
         this.money = money;
     }
@@ -74,6 +94,7 @@ public class Hero {
     public float getStudyingProcess() {
         return studyingProcess;
     }
+
 
     public void setStudyingProcess(float studyingProcess) {
         this.studyingProcess = studyingProcess;
@@ -83,6 +104,7 @@ public class Hero {
         return fitness;
     }
 
+
     public void setFitness(float fitness) {
         this.fitness = fitness;
     }
@@ -90,6 +112,7 @@ public class Hero {
     public Level getLevel() {
         return level;
     }
+
 
     public void setLevel(Level level) {
         this.level = level;

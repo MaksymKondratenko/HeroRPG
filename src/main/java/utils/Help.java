@@ -18,6 +18,7 @@ public class Help extends Action {
     public void setInfo(String info) {
         this.info = info;
     }
+
     public void showInfo() {
         System.out.println(info);
     }

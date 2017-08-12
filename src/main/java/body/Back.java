@@ -1,19 +1,26 @@
 package body;
 
 import hero.Level;
-import utils.Time;
-
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+@Component
 public class Back extends Body {
     private String name = "Have a wall behind.";
+    @Value("#{time.addTime(30)}")
     private int time;
     private int xp;
     private Level level;
+    @Value("-10")
     private int hunger;
+    @Value("-15")
     private int rest;
+    @Value("-5")
     private int excitement;
     private int appeal;
+    @Value("-1")
     private int money;
     private float studyingProcess;
+    @Value("0.05f")
     private float fitness;
 
     public int getTime() {

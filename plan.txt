@@ -1,2 +1,3 @@
 To do list:
 1) provide annotations
+2) use @ComponentScan at @Configuration to get rid of bean instantiating (7.12.2)

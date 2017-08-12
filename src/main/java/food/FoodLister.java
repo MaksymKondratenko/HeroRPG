@@ -1,14 +1,18 @@
 package food;
 
 import hero.Action;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-
+@Component
 public class FoodLister {
     public FoodLister() {
     }
+    public FoodLister(ArrayList<Action> list){
+        foodList = list;
+    }
 
-    public ArrayList<Action> foodList = new ArrayList<>();
+    public ArrayList<Action> foodList;
 
     public ArrayList<Action> getFoodList(){
         return foodList;

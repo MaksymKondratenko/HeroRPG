@@ -2,15 +2,24 @@ package activities;
 
 import hero.Action;
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Work extends Action {
+    @Value("#{time.addTime(480)}")
     private int time;
+    @Value("5")
     private int xp;
     private Level level;
+    @Value("-20")
     private int hunger;
+    @Value("-20")
     private int rest;
+    @Value("20")
     private int excitement;
     private int appeal;
+    @Value("10")
     private int money;
     private float studyingProcess;
     private float fitness;

@@ -1,18 +1,27 @@
 package food;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Pizza extends Food {
     private String info = "Taste the Italy!";
+    @Value("#{time.addTime(45)}")
     private int time;
+    @Value("2")
     private int xp;
     private Level level;
+    @Value("50")
     private int hunger;
     private int rest;
+    @Value("3")
     private int excitement;
     private int appeal;
+    @Value("-4")
     private int money;
     private float studyingProcess;
+    @Value("-0.02f")
     private float fitness;
 
 

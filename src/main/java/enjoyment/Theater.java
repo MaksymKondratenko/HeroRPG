@@ -1,16 +1,25 @@
 package enjoyment;
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Theater extends Enjoyment{
     private String info = "Go and develop yourself culturally!";
+    @Value("#{time.addTime(180)}")
     private int time;
+    @Value("4")
     private int xp;
     private Level level;
+    @Value("-5")
     private int hunger;
+    @Value("25")
     private int rest;
+    @Value("40")
     private int excitement;
     private int appeal;
+    @Value("-3")
     private int money;
     private float studyingProcess;
     private float fitness;

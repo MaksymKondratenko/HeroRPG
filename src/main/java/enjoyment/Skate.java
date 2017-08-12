@@ -2,14 +2,22 @@ package enjoyment;
 
 
 import hero.Level;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Skate extends Enjoyment{
     private String info = "Off the wall!";
+    @Value("#{time.addTime(30)}")
     private int time;
+    @Value("2")
     private int xp;
     private Level level;
+    @Value("-15")
     private int hunger;
+    @Value("10")
     private int rest;
+    @Value("25")
     private int excitement;
     private int appeal;
     private int money;

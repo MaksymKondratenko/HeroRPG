@@ -1,13 +1,17 @@
 package washing;
 
 import hero.Action;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-
+@Component
 public class WashLister {
-    private ArrayList<Action> washList = new ArrayList<>();
+    private ArrayList<Action> washList;
 
     public WashLister() {
+    }
+    public WashLister(ArrayList<Action> list){
+        washList = list;
     }
 
     public ArrayList<Action> getWashList(){

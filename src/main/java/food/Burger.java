@@ -1,6 +1,5 @@
 package food;
 
-import hero.Level;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,16 +10,12 @@ public class Burger extends Food {
     private int time;
     @Value("1")
     private int xp;
-    private Level level;
     @Value("30")
     private int hunger;
-    private int rest;
     @Value("1")
     private int excitement;
-    private int appeal;
     @Value("-1")
     private int money;
-    private float studyingProcess;
     @Value("-0.05f")
     private float fitness;
 
@@ -53,14 +48,6 @@ public class Burger extends Food {
         this.xp = xp;
     }
 
-    public Level getLevel() {
-        return level;
-    }
-
-    public void setLevel(Level level) {
-        this.level = level;
-    }
-
     @Override
     public int getHunger() {
         return hunger;
@@ -69,16 +56,6 @@ public class Burger extends Food {
     @Override
     public void setHunger(int hunger) {
         this.hunger = hunger;
-    }
-
-    @Override
-    public int getRest() {
-        return rest;
-    }
-
-    @Override
-    public void setRest(int rest) {
-        this.rest = rest;
     }
 
     @Override
@@ -92,16 +69,6 @@ public class Burger extends Food {
     }
 
     @Override
-    public int getAppeal() {
-        return appeal;
-    }
-
-    @Override
-    public void setAppeal(int appeal) {
-        this.appeal = appeal;
-    }
-
-    @Override
     public int getMoney() {
         return money;
     }
@@ -109,16 +76,6 @@ public class Burger extends Food {
     @Override
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    @Override
-    public float getStudyingProcess() {
-        return studyingProcess;
-    }
-
-    @Override
-    public void setStudyingProcess(float studyingProcess) {
-        this.studyingProcess = studyingProcess;
     }
 
     @Override

@@ -1,10 +1,9 @@
 package enjoyment;
 
 import hero.Action;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-@Component
+
 public class EnjoymentLister {
     private ArrayList<Action> enjoymentList;
 

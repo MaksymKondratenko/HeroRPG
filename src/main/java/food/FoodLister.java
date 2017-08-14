@@ -1,10 +1,9 @@
 package food;
 
 import hero.Action;
-import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-@Component
+
 public class FoodLister {
     public FoodLister() {
     }
@@ -29,5 +28,4 @@ public class FoodLister {
     public void setFoodList(ArrayList<Action> foodList) {
         this.foodList = foodList;
     }
-
 }

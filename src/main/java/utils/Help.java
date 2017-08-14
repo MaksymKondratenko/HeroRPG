@@ -8,9 +8,6 @@ public class Help extends Action {
             "train - to go to gym\n      study - to gain some knowledge\n      wash - to clean the hero\n      " +
             "date - to go to date\n      time - to show the game time\n      end - to exit";
 
-    public Help() {
-    }
-
     public String getInfo() {
         return info;
     }

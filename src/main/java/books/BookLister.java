@@ -1,11 +1,10 @@
 package books;
 
 import hero.Action;
-import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
-@Component
+
 public class BookLister {
     public BookLister() {
     }

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class Hero {
-    private static Hero singleHero;
     @Value("Sir Lancelot")
     private String name;
     @Value("0")
@@ -28,7 +27,6 @@ public class Hero {
     @Value("0.0f")
     private float fitness;
     private Level level = new Level();
-
 
     public Hero() {
     }
@@ -112,7 +110,6 @@ public class Hero {
     public Level getLevel() {
         return level;
     }
-
 
     public void setLevel(Level level) {
         this.level = level;

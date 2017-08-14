@@ -49,7 +49,7 @@ public class AnnotationConfig {
     }
 
     @Bean
-    public Exit exit() {
+    public Exit end() {
         return new Exit();
     }
 

@@ -2,15 +2,14 @@ package activities;
 
 import hero.Action;
 import hero.Girl;
-import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
-@Component
+
 public class Date extends Action {
-    Girl girl;
+    private Girl girl;
     public Date(Girl girl){
         this.girl = girl;
     }

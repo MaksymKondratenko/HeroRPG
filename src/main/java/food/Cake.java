@@ -1,9 +1,7 @@
 package food;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Cake extends Food{
     private String info = "Delicious way to spend your life!";
     @Value("#{time.addTime(30)}")
@@ -19,9 +17,6 @@ public class Cake extends Food{
     @Value("-0.05f")
     private float fitness;
 
-    public Cake() {
-    }
-
     public String getInfo() {
         return info;
     }
@@ -30,10 +25,12 @@ public class Cake extends Food{
         this.info = info;
     }
 
+    @Override
     public int getTime() {
         return time;
     }
 
+    @Override
     public void setTime(int time) {
         this.time = time;
     }
@@ -88,6 +85,7 @@ public class Cake extends Food{
         this.fitness = fitness;
     }
 
+    @Override
     public String toString() {
         return "Cake";
     }

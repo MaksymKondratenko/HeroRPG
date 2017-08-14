@@ -1,53 +1,30 @@
 package body;
 
-import hero.Level;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Legs extends Body {
-    private String name = "Run, Forrest, run!.";
+    private String info = "Run, Forrest, run!.";
     @Value("#{time.addTime(30)}")
     private int time;
-    private int xp;
-    private Level level;
     @Value("-10")
     private int hunger;
     @Value("-15")
     private int rest;
     @Value("-5")
     private int excitement;
-    private int appeal;
     @Value("-1")
     private int money;
-    private float studyingProcess;
     @Value("0.05f")
     private float fitness;
 
+    @Override
     public int getTime() {
         return time;
     }
 
+    @Override
     public void setTime(int time) {
         this.time = time;
-    }
-
-    @Override
-    public int getXp() {
-        return xp;
-    }
-
-    @Override
-    public void setXp(int xp) {
-        this.xp = xp;
-    }
-
-    public Level getLevel() {
-        return level;
-    }
-
-    public void setLevel(Level level) {
-        this.level = level;
     }
 
     @Override
@@ -81,16 +58,6 @@ public class Legs extends Body {
     }
 
     @Override
-    public int getAppeal() {
-        return appeal;
-    }
-
-    @Override
-    public void setAppeal(int appeal) {
-        this.appeal = appeal;
-    }
-
-    @Override
     public int getMoney() {
         return money;
     }
@@ -98,16 +65,6 @@ public class Legs extends Body {
     @Override
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    @Override
-    public float getStudyingProcess() {
-        return studyingProcess;
-    }
-
-    @Override
-    public void setStudyingProcess(float studyingProcess) {
-        this.studyingProcess = studyingProcess;
     }
 
     @Override
@@ -120,16 +77,14 @@ public class Legs extends Body {
         this.fitness = fitness;
     }
 
-    public Legs() {
+    public String getInfo() {
+        return info;
     }
 
-    public String getName() {
-        return name;
+    public void setInfo(String info) {
+        this.info = info;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
     public String toString() {
         return "Legs";
     }

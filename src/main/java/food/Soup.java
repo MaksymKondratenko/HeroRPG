@@ -1,30 +1,19 @@
 package food;
 
-import hero.Level;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Soup extends Food {
     private String info = "Hot & tasty!";
     @Value("#{time.addTime(30)}")
     private int time;
     @Value("2")
     private int xp;
-    private Level level;
     @Value("25")
     private int hunger;
-    private int rest;
     @Value("1")
     private int excitement;
-    private int appeal;
     @Value("-1")
     private int money;
-    private float studyingProcess;
-    private float fitness;
-
-    public Soup() {
-    }
 
     public String getInfo() {
         return info;
@@ -34,10 +23,12 @@ public class Soup extends Food {
         this.info = info;
     }
 
+    @Override
     public int getTime() {
         return time;
     }
 
+    @Override
     public void setTime(int time) {
         this.time = time;
     }
@@ -52,14 +43,6 @@ public class Soup extends Food {
         this.xp = xp;
     }
 
-    public Level getLevel() {
-        return level;
-    }
-
-    public void setLevel(Level level) {
-        this.level = level;
-    }
-
     @Override
     public int getHunger() {
         return hunger;
@@ -68,16 +51,6 @@ public class Soup extends Food {
     @Override
     public void setHunger(int hunger) {
         this.hunger = hunger;
-    }
-
-    @Override
-    public int getRest() {
-        return rest;
-    }
-
-    @Override
-    public void setRest(int rest) {
-        this.rest = rest;
     }
 
     @Override
@@ -91,16 +64,6 @@ public class Soup extends Food {
     }
 
     @Override
-    public int getAppeal() {
-        return appeal;
-    }
-
-    @Override
-    public void setAppeal(int appeal) {
-        this.appeal = appeal;
-    }
-
-    @Override
     public int getMoney() {
         return money;
     }
@@ -111,28 +74,7 @@ public class Soup extends Food {
     }
 
     @Override
-    public float getStudyingProcess() {
-        return studyingProcess;
-    }
-
-    @Override
-    public void setStudyingProcess(float studyingProcess) {
-        this.studyingProcess = studyingProcess;
-    }
-
-    @Override
-    public float getFitness() {
-        return fitness;
-    }
-
-    @Override
-    public void setFitness(float fitness) {
-        this.fitness = fitness;
-    }
-
     public String toString() {
         return "Soup";
     }
-
-
 }

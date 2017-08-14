@@ -1,31 +1,21 @@
 package enjoyment;
 
-import hero.Level;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Cinema extends Enjoyment{
     private String info = "What movie is on screen now?";
     @Value("#{time.addTime(120)}")
     private int time;
     @Value("6")
     private int xp;
-    private Level level;
     @Value("-8")
     private int hunger;
     @Value("5")
     private int rest;
     @Value("30")
     private int excitement;
-    private int appeal;
     @Value("-2")
     private int money;
-    private float studyingProcess;
-    private float fitness;
-
-    public Cinema() {
-    }
 
     public String getInfo() {
         return info;
@@ -35,10 +25,12 @@ public class Cinema extends Enjoyment{
         this.info = info;
     }
 
+    @Override
     public int getTime() {
         return time;
     }
 
+    @Override
     public void setTime(int time) {
         this.time = time;
     }
@@ -51,14 +43,6 @@ public class Cinema extends Enjoyment{
     @Override
     public void setXp(int xp) {
         this.xp = xp;
-    }
-
-    public Level getLevel() {
-        return level;
-    }
-
-    public void setLevel(Level level) {
-        this.level = level;
     }
 
     @Override
@@ -92,16 +76,6 @@ public class Cinema extends Enjoyment{
     }
 
     @Override
-    public int getAppeal() {
-        return appeal;
-    }
-
-    @Override
-    public void setAppeal(int appeal) {
-        this.appeal = appeal;
-    }
-
-    @Override
     public int getMoney() {
         return money;
     }
@@ -112,25 +86,6 @@ public class Cinema extends Enjoyment{
     }
 
     @Override
-    public float getStudyingProcess() {
-        return studyingProcess;
-    }
-
-    @Override
-    public void setStudyingProcess(float studyingProcess) {
-        this.studyingProcess = studyingProcess;
-    }
-
-    @Override
-    public float getFitness() {
-        return fitness;
-    }
-
-    @Override
-    public void setFitness(float fitness) {
-        this.fitness = fitness;
-    }
-
     public String toString() {
         return "Cinema";
     }

@@ -1,36 +1,31 @@
 package activities;
 
 import hero.Action;
-import hero.Level;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class Work extends Action {
     @Value("#{time.addTime(480)}")
     private int time;
     @Value("5")
     private int xp;
-    private Level level;
     @Value("-20")
     private int hunger;
     @Value("-20")
     private int rest;
     @Value("20")
     private int excitement;
-    private int appeal;
     @Value("10")
     private int money;
-    private float studyingProcess;
-    private float fitness;
 
     public Work() {
     }
 
+    @Override
     public int getTime() {
         return time;
     }
 
+    @Override
     public void setTime(int time) {
         this.time = time;
     }
@@ -43,14 +38,6 @@ public class Work extends Action {
     @Override
     public void setXp(int xp) {
         this.xp = xp;
-    }
-
-    public Level getLevel() {
-        return level;
-    }
-
-    public void setLevel(Level level) {
-        this.level = level;
     }
 
     @Override
@@ -84,16 +71,6 @@ public class Work extends Action {
     }
 
     @Override
-    public int getAppeal() {
-        return appeal;
-    }
-
-    @Override
-    public void setAppeal(int appeal) {
-        this.appeal = appeal;
-    }
-
-    @Override
     public int getMoney() {
         return money;
     }
@@ -101,25 +78,5 @@ public class Work extends Action {
     @Override
     public void setMoney(int money) {
         this.money = money;
-    }
-
-    @Override
-    public float getStudyingProcess() {
-        return studyingProcess;
-    }
-
-    @Override
-    public void setStudyingProcess(float studyingProcess) {
-        this.studyingProcess = studyingProcess;
-    }
-
-    @Override
-    public float getFitness() {
-        return fitness;
-    }
-
-    @Override
-    public void setFitness(float fitness) {
-        this.fitness = fitness;
     }
 }

@@ -1,17 +1,23 @@
 package hero;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public abstract class Action {
-    private int xp = 0;
-    private int hunger = 0;
-    private int rest = 0;
-    private int excitement = 0;
-    private int appeal = 0;
-    private int money = 0;
-    private float studyingProcess = 0.0f;
-    private float fitness = 0.0f;
+    private int time;
+    private int xp;
+    private int hunger;
+    private int rest;
+    private int excitement;
+    private int appeal;
+    private int money;
+    private float studyingProcess;
+    private float fitness;
+
+    public int getTime() {
+        return time;
+    }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
 
     public int getHunger() {
         return hunger;

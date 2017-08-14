@@ -16,7 +16,6 @@ public class FoodConfig {
         return new FoodLister(foodList());
     }
 
-
     @Bean
     @DependsOn("foodLister")
     public Food eat(){

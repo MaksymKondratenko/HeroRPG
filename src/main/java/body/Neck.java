@@ -4,8 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Neck extends Body {
-    private String info = "Vital for keeping your head straight.";
+@Getter @Setter
+public class Neck extends Body {
+
+    @Value("Vital for keeping your head straight.")
+    private String info;
     @Value("#{time.addTime(30)}")
     private int time;
     @Value("-10")

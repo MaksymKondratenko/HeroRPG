@@ -5,7 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Skate extends Enjoyment{
+@Getter @Setter
+public class Skate extends Enjoyment{
 
     @Value("Off the wall!")
     private String info;

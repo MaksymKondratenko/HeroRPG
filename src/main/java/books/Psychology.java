@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Psychology extends Book {
+@Getter @Setter
+public class Psychology extends Book {
+
     @Value("Understand her or become crazy.")
     private String info;
     @Value("#{time.addTime(60)}")

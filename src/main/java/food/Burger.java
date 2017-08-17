@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Burger extends Food {
+@Getter @Setter
+public class Burger extends Food {
 
     @Value("The fastest way to get TTT!")
     private String info;

@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Cake extends Food{
+@Getter @Setter
+public class Cake extends Food{
 
     @Value("Delicious way to spend your life!")
     private String info;

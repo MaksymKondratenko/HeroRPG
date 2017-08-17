@@ -10,9 +10,7 @@ public class TrainLister {
     @Getter @Setter
     private ArrayList<Action> trainList = new ArrayList<>();
 
-    public TrainLister() {
-    }
-
+    public TrainLister() {}
     public TrainLister(ArrayList<Action> list){
         trainList = list;
     }
@@ -24,5 +22,4 @@ public class TrainLister {
             System.out.print(x + ", ");
         System.out.println("\n");
     }
-
 }

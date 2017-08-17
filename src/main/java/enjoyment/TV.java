@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class TV extends Enjoyment {
+@Getter @Setter
+public class TV extends Enjoyment {
 
     @Value("Watch TV to get stupid.")
     private String info;

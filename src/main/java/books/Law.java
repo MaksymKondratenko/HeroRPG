@@ -4,10 +4,10 @@ import hero.Level;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
-public @Getter @Setter class Law extends Book {
+@Getter @Setter
+public class Law extends Book {
+
     @Value("How to be true in every situation?")
     private String info;
     @Value("#{time.addTime(60)}")

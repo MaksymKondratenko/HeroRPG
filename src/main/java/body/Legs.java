@@ -4,10 +4,11 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter
-@Setter
-class Legs extends Body {
-    private String info = "Run, Forrest, run!.";
+@Getter @Setter
+public class Legs extends Body {
+
+    @Value("Run, Forrest, run!.")
+    private String info;
     @Value("#{time.addTime(30)}")
     private int time;
     @Value("-10")

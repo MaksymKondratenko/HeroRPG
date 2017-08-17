@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Back extends Body {
+@Getter @Setter
+public class Back extends Body {
+
     @Value("Have a wall behind.")
     private String info;
     @Value("#{time.addTime(30)}")

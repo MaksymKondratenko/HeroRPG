@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Bicep extends Body {
+@Getter @Setter
+public class Bicep extends Body {
+
     @Value("Nice pillow for your head.")
     private String info;
     @Value("#{time.addTime(30)}")

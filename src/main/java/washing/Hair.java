@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @Getter @Setter
 public class Hair extends Washing {
+
     @Value("Grass hair")
     private String id;
     @Value("Stylish look!")

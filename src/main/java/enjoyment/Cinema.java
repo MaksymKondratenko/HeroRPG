@@ -4,7 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Cinema extends Enjoyment{
+@Getter @Setter
+public class Cinema extends Enjoyment{
 
     @Value("What movie is on screen now?")
     private String info;

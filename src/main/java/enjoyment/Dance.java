@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Dance extends Enjoyment{
+@Getter @Setter
+public class Dance extends Enjoyment{
+
     @Value("I'd like to move it, move it...")
     private String info;
     @Value("#{time.addTime(30)}")

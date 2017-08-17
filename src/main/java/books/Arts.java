@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Arts extends Book {
+@Getter @Setter
+public class Arts extends Book {
+
     @Value("Life is Art. Naturally.")
     private String info;
     @Value("#{time.addTime(60)}")

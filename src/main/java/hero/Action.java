@@ -5,6 +5,7 @@ import lombok.Setter;
 
 @Getter @Setter
 public abstract class Action{
+
     private int time;
     private int xp;
     private int hunger;

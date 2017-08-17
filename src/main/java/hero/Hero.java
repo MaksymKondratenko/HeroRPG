@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @Getter @Setter //lombok framework annotations
 public class Hero {
+
     @Value("Sir Lancelot")
     private String name;
     @Value("0")

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Value;
 
 @Getter @Setter
 public class Bath extends Washing {
+
     @Value("Take a bath")
     private String id;
     @Value("Better to use a salt bomb.")

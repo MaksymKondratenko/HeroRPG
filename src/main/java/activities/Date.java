@@ -11,6 +11,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class Date extends Action {
+
     @Getter @Setter private Girl girl;
     public Date(Girl girl){
         this.girl = girl;

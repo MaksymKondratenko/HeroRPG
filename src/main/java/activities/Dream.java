@@ -5,7 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Dream extends Action {
+@Getter @Setter
+public class Dream extends Action {
+
     @Value("#{time.addTime(360)}")
     private int time;
     @Value("-5")

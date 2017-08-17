@@ -4,7 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public @Getter @Setter class Press extends Body {
+@Getter @Setter
+public class Press extends Body {
+
     private String info = "Crush all received punches for ease.";
     @Value("#{time.addTime(30)}")
     private int time;

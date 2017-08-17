@@ -1,11 +1,12 @@
 package books;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
-public class Psychology extends Book {
-    private String info = "Understand her or become crazy.";
+public @Getter @Setter class Psychology extends Book {
+    @Value("Understand her or become crazy.")
+    private String info;
     @Value("#{time.addTime(60)}")
     private int time;
     @Value("2")
@@ -16,64 +17,6 @@ public class Psychology extends Book {
     private int rest;
     @Value("-2")
     private int excitement;
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    @Override
-    public int getTime() {
-        return time;
-    }
-
-    @Override
-    public void setTime(int time) {
-        this.time = time;
-    }
-
-    @Override
-    public int getXp() {
-        return xp;
-    }
-
-    @Override
-    public void setXp(int xp) {
-        this.xp = xp;
-    }
-
-    @Override
-    public int getHunger() {
-        return hunger;
-    }
-
-    @Override
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
-    }
-
-    @Override
-    public int getRest() {
-        return rest;
-    }
-
-    @Override
-    public void setRest(int rest) {
-        this.rest = rest;
-    }
-
-    @Override
-    public int getExcitement() {
-        return excitement;
-    }
-
-    @Override
-    public void setExcitement(int excitement) {
-        this.excitement = excitement;
-    }
 
     @Override
     public String toString() {

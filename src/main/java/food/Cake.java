@@ -1,9 +1,13 @@
 package food;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Value;
 
-public class Cake extends Food{
-    private String info = "Delicious way to spend your life!";
+public @Getter @Setter class Cake extends Food{
+
+    @Value("Delicious way to spend your life!")
+    private String info;
     @Value("#{time.addTime(30)}")
     private int time;
     @Value("3")
@@ -16,74 +20,6 @@ public class Cake extends Food{
     private int money;
     @Value("-0.05f")
     private float fitness;
-
-    public String getInfo() {
-        return info;
-    }
-
-    public void setInfo(String info) {
-        this.info = info;
-    }
-
-    @Override
-    public int getTime() {
-        return time;
-    }
-
-    @Override
-    public void setTime(int time) {
-        this.time = time;
-    }
-
-    @Override
-    public int getXp() {
-        return xp;
-    }
-
-    @Override
-    public void setXp(int xp) {
-        this.xp = xp;
-    }
-
-    @Override
-    public int getHunger() {
-        return hunger;
-    }
-
-    @Override
-    public void setHunger(int hunger) {
-        this.hunger = hunger;
-    }
-
-    @Override
-    public int getExcitement() {
-        return excitement;
-    }
-
-    @Override
-    public void setExcitement(int excitement) {
-        this.excitement = excitement;
-    }
-
-    @Override
-    public int getMoney() {
-        return money;
-    }
-
-    @Override
-    public void setMoney(int money) {
-        this.money = money;
-    }
-
-    @Override
-    public float getFitness() {
-        return fitness;
-    }
-
-    @Override
-    public void setFitness(float fitness) {
-        this.fitness = fitness;
-    }
 
     @Override
     public String toString() {

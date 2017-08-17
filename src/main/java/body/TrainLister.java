@@ -1,21 +1,20 @@
 package body;
 
 import hero.Action;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
 public class TrainLister {
-    private ArrayList<Action> trainList = new ArrayList<Action>();
+    @Getter @Setter
+    private ArrayList<Action> trainList = new ArrayList<>();
 
     public TrainLister() {
     }
 
     public TrainLister(ArrayList<Action> list){
         trainList = list;
-    }
-
-    public ArrayList<Action> getTrainList (){
-        return trainList;
     }
 
     public void showTrainList(){
@@ -26,7 +25,4 @@ public class TrainLister {
         System.out.println("\n");
     }
 
-    public void setTrainList(ArrayList<Action> trainList) {
-        this.trainList = trainList;
-    }
 }

@@ -1,16 +1,15 @@
 package hero;
 
-import org.springframework.stereotype.Component;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by Maksym on 17.02.2017.
  */
-@Component
-public class Level {
-    int lvl = 1;
 
-    public Level() {
-    }
+public class Level {
+    @Getter @Setter
+    int lvl = 1;
 
     /*public int xpEarn (int xp){
         int temp = Hero.xp;
@@ -36,12 +35,4 @@ public class Level {
         System.out.println("Congrats on new level!");
         return lvl;
     }*/
-
-    public int getLvl() {
-        return lvl;
-    }
-
-    public void setLvl(int lvl) {
-        this.lvl = lvl;
-    }
 }

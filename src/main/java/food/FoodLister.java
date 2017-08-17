@@ -1,20 +1,18 @@
 package food;
 
 import hero.Action;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
 public class FoodLister {
-    public FoodLister() {
-    }
-    public FoodLister(ArrayList<Action> list){
-        foodList = list;
-    }
-
+    @Getter @Setter
     public ArrayList<Action> foodList;
 
-    public ArrayList<Action> getFoodList(){
-        return foodList;
+    public FoodLister() {}
+    public FoodLister(ArrayList<Action> list){
+        foodList = list;
     }
 
     public void showFoodList(){
@@ -23,9 +21,5 @@ public class FoodLister {
         for (Action x : foodList)
             System.out.print(x + ", ");
         System.out.println("\n");
-    }
-
-    public void setFoodList(ArrayList<Action> foodList) {
-        this.foodList = foodList;
     }
 }

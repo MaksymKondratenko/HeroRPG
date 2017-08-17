@@ -11,6 +11,7 @@ import utils.Printer;
 import utils.Time;
 
 @Configuration
+@EnableAspectJAutoProxy
 @Lazy
 @Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class})
 public class AnnotationConfig {

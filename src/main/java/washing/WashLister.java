@@ -1,20 +1,19 @@
 package washing;
 
 import hero.Action;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
 public class WashLister {
+
+    @Getter @Setter
     private ArrayList<Action> washList;
 
-    public WashLister() {
-    }
+    public WashLister() {}
     public WashLister(ArrayList<Action> list){
         washList = list;
-    }
-
-    public ArrayList<Action> getWashList(){
-        return washList;
     }
 
     public void showWashList(){
@@ -23,9 +22,5 @@ public class WashLister {
         for (Action x : washList)
             System.out.print(x + ", ");
         System.out.println("\n");
-    }
-
-    public void setWashList(ArrayList<Action> washList) {
-        this.washList = washList;
     }
 }

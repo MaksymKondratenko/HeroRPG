@@ -1,20 +1,18 @@
 package enjoyment;
 
 import hero.Action;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 
 public class EnjoymentLister {
+    @Getter @Setter
     private ArrayList<Action> enjoymentList;
 
     public EnjoymentLister(){}
-
     public EnjoymentLister(ArrayList<Action> list) {
         enjoymentList = list;
-    }
-
-    public ArrayList<Action> getEnjoymentList() {
-        return enjoymentList;
     }
 
     public void showEnjoymentList() {
@@ -23,10 +21,5 @@ public class EnjoymentLister {
         for (Action x : enjoymentList)
             System.out.print(x + ", ");
         System.out.println("\n");
-    }
-
-
-    public void setEnjoymentList(ArrayList<Action> enjoyList) {
-        this.enjoymentList = enjoyList;
     }
 }

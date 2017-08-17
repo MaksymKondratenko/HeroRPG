@@ -1,36 +1,19 @@
 package utils;
 
 import hero.Action;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Created by Maksym on 20.02.2017.
  */
-public class Time extends Action {
 
+@Setter //generates setters for all fields
+public class Time extends Action {
     private int d = 0;
     private int h = 0;
     private int m = 0;
-
-    public void setD(int d) {
-        this.d = d;
-    }
-
-    public void setH(int h) {
-        this.h = h;
-    }
-
-    public void setM(int m) {
-        this.m = m;
-    }
-
-    public void setDate(int date) {
-        this.date = date;
-    }
-
-    public int getDate() {
-        return date;
-    }
-
+    @Getter //generates a getter also
     private int date = 0;
 
     public int addTime(int mins){

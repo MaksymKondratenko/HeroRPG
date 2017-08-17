@@ -2,6 +2,8 @@ package activities;
 
 import hero.Action;
 import hero.Girl;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,7 +11,7 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class Date extends Action {
-    private Girl girl;
+    @Getter @Setter private Girl girl;
     public Date(Girl girl){
         this.girl = girl;
     }
@@ -23,13 +25,5 @@ public class Date extends Action {
             System.out.println("You've found a couple! Her name is " + girl.getName());
         else
             System.out.println("Not your time, bro.");
-    }
-
-    public Girl getGirl() {
-        return girl;
-    }
-
-    public void setGirl(Girl girl) {
-        this.girl = girl;
     }
 }

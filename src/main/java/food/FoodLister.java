@@ -1,19 +1,17 @@
 package food;
 
 import hero.Action;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@AllArgsConstructor
 public class FoodLister {
+
     @Getter @Setter
     public ArrayList<Action> foodList;
-
-    public FoodLister() {}
-    public FoodLister(ArrayList<Action> list){
-        foodList = list;
-    }
 
     public void showFoodList(){
         getFoodList();

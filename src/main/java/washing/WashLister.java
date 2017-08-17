@@ -1,20 +1,17 @@
 package washing;
 
 import hero.Action;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@AllArgsConstructor
 public class WashLister {
 
     @Getter @Setter
     private ArrayList<Action> washList;
-
-    public WashLister() {}
-    public WashLister(ArrayList<Action> list){
-        washList = list;
-    }
 
     public void showWashList(){
         getWashList();

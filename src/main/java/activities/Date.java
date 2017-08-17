@@ -2,6 +2,7 @@ package activities;
 
 import hero.Action;
 import hero.Girl;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,12 +11,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Random;
 
+@AllArgsConstructor
 public class Date extends Action {
 
-    @Getter @Setter private Girl girl;
-    public Date(Girl girl){
-        this.girl = girl;
-    }
+    @Getter @Setter
+    private Girl girl;
 
     public void date() throws IOException {
         System.out.println("You are going to hunt a new chick. Who'd be next? (Tip: type her name.)");

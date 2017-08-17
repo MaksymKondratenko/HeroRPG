@@ -1,19 +1,17 @@
 package body;
 
 import hero.Action;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@AllArgsConstructor
 public class TrainLister {
+
     @Getter @Setter
     private ArrayList<Action> trainList = new ArrayList<>();
-
-    public TrainLister() {}
-    public TrainLister(ArrayList<Action> list){
-        trainList = list;
-    }
 
     public void showTrainList(){
         getTrainList();

@@ -1,20 +1,18 @@
 package books;
 
 import hero.Action;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 
+@AllArgsConstructor
 public class BookLister {
+
     @Getter @Setter
     private ArrayList<Action> bookList;
-
-    public BookLister(){}
-    public BookLister(ArrayList<Action> list){
-        bookList = list;
-    }
 
     @PostConstruct
     protected void showBookList(){

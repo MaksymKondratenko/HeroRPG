@@ -1,19 +1,17 @@
 package enjoyment;
 
 import hero.Action;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 
+@AllArgsConstructor
 public class EnjoymentLister {
+
     @Getter @Setter
     private ArrayList<Action> enjoymentList;
-
-    public EnjoymentLister(){}
-    public EnjoymentLister(ArrayList<Action> list) {
-        enjoymentList = list;
-    }
 
     public void showEnjoymentList() {
         getEnjoymentList();

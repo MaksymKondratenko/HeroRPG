@@ -23,6 +23,6 @@ public class Study extends Action {
 
     @Override
     public String toString(){
-        return "Study";
+        return "Studying";
     }
 }

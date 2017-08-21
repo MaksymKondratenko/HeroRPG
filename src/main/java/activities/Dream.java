@@ -17,6 +17,6 @@ public class Dream extends Action {
 
     @Override
     public String toString(){
-      return "Dream";
+      return "Sleeping";
     }
 }

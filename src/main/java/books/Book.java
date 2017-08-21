@@ -8,6 +8,6 @@ import hero.Action;
 public class Book extends Action{
     @Override
     public String toString(){
-        return "Book";
+        return "Reading";
     }
 }

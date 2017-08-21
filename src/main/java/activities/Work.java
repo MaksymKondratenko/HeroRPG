@@ -23,6 +23,6 @@ public class Work extends Action {
 
     @Override
     public String toString(){
-        return "Work";
+        return "Working";
     }
 }

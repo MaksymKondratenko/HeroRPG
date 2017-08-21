@@ -1,2 +1,4 @@
 To do list:
-DONE!
+1) encapsulate getProperties() method; - Done!
+2) change toString() method to be more user friendly; - Done!
+3) add README.txt file with information; - Done!

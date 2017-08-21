@@ -2,24 +2,23 @@ package database;
 
 import hero.Action;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
 public class DBWriter {
 
+    Connection conn = null;
+    PreparedStatement state = null;
+    PropertyAgent pa = new PropertyAgent();
+
     public void write(Action action){
-
-        Connection conn = null;
-        PreparedStatement state = null;
-        ResultSet rs = null;
-
-        String dbUrl = "jdbc:mysql://localhost:3306/HeroDB?useSSL=false&serverTimezone=UTC";
-        String user = "student";
-        String password = "student";
-
         String act = action.toString();
+        pa.getProperties();
 
         try {
-            conn = DriverManager.getConnection(dbUrl, user, password);
+            conn = DriverManager.getConnection("" + pa.getDbUrl() + pa.getDbName() + pa.getConnectionArgs(), pa.getUser(), pa.getPassword());
             state = conn.prepareStatement("insert into actions (act) value (?)");
             state.setString(1, act);
             state.execute();
@@ -31,8 +30,6 @@ public class DBWriter {
                     conn.close();
                 if (state != null)
                     state.close();
-                if (rs != null)
-                    rs.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

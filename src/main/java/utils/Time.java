@@ -41,6 +41,6 @@ public class Time extends Action {
 
     @Override
     public String toString(){
-        return "Time";
+        return "Wondering, how much time is it";
     }
 }

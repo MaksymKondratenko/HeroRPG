@@ -3,7 +3,7 @@
     <groupId>org.springframework.samples</groupId>
     <artifactId>HeroRPG</artifactId>
     <packaging>jar</packaging>
-    <version>0.2.1</version>
+    <version>0.2.2</version>
 
     <build>
         <plugins>

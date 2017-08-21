@@ -6,18 +6,16 @@ import java.sql.*;
 
 public class DBReader extends Action {
 
+    Connection conn = null;
+    Statement state = null;
+    ResultSet rs = null;
+    PropertyAgent pa = new PropertyAgent();
+
     public void read(){
-
-        Connection conn = null;
-        Statement state = null;
-        ResultSet rs = null;
-
-        String dbUrl = "jdbc:mysql://localhost:3306/HeroDB?useSSL=false&serverTimezone=UTC";
-        String user = "student";
-        String password = "student";
+        pa.getProperties();;
 
         try {
-            conn = DriverManager.getConnection(dbUrl, user, password);
+            conn = DriverManager.getConnection("" + pa.getDbUrl() + pa.getDbName() + pa.getConnectionArgs(), pa.getUser(), pa.getPassword());
             state = conn.createStatement();
             rs = state.executeQuery("select * from actions");
             System.out.println("#    Actions");

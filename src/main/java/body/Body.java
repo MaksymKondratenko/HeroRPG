@@ -9,6 +9,6 @@ import hero.Action;
 public class Body extends Action{
     @Override
     public String toString(){
-        return "Body";
+        return "Training";
     }
 }

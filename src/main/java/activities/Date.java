@@ -30,6 +30,6 @@ public class Date extends Action {
 
     @Override
     public String toString() {
-        return "Date";
+        return "Dating a girl";
     }
 }

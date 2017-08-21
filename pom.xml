@@ -3,7 +3,7 @@
     <groupId>org.springframework.samples</groupId>
     <artifactId>HeroRPG</artifactId>
     <packaging>jar</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.2.1</version>
 
     <build>
         <plugins>
@@ -75,6 +75,12 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.6</version>
+        </dependency>
 
         <!-- Test Artifacts -->
         <dependency>

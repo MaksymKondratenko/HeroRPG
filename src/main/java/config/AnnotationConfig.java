@@ -13,7 +13,7 @@ import utils.Time;
 @Configuration
 @EnableAspectJAutoProxy
 @Lazy
-@Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class})
+@Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class, DatabaseConfig.class})
 public class AnnotationConfig {
 
     @Bean

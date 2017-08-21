@@ -38,4 +38,9 @@ public class Time extends Action {
 
         System.out.println("Time elapsed: " + getD() + " days, " + getH() + " hours, " + getM() + " minutes.");
     }
+
+    @Override
+    public String toString(){
+        return "Time";
+    }
 }

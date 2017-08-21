@@ -20,4 +20,9 @@ public class Study extends Action {
     private int excitement;
     @Value("0.05f")
     private float studyingProcess;
+
+    @Override
+    public String toString(){
+        return "Study";
+    }
 }

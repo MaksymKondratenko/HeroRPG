@@ -17,4 +17,9 @@ public class Adventure {
     public void welcome(){
         System.out.print("What you are going to do next? (just type a word! Type \"help\" for help.)\n");
     }
+
+    @Override
+    public String toString(){
+        return "Adventure";
+    }
 }

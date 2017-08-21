@@ -7,4 +7,8 @@ import hero.Action;
  */
 
 public class Food extends Action {
+    @Override
+    public String toString(){
+        return "Food";
+    }
 }

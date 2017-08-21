@@ -14,4 +14,9 @@ public class Dream extends Action {
     private int hunger;
     @Value("50")
     private int rest;
+
+    @Override
+    public String toString(){
+      return "Dream";
+    }
 }

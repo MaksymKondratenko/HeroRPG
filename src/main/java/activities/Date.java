@@ -27,4 +27,9 @@ public class Date extends Action {
         else
             System.out.println("Not your time, bro.");
     }
+
+    @Override
+    public String toString() {
+        return "Date";
+    }
 }

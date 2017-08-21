@@ -20,4 +20,9 @@ public class Work extends Action {
     private int excitement;
     @Value("10")
     private int money;
+
+    @Override
+    public String toString(){
+        return "Work";
+    }
 }

@@ -2,6 +2,8 @@ package logic;
 
 import adventure.Adventure;
 import config.AnnotationConfig;
+import database.DBInitializer;
+import database.DBWriter;
 import hero.Action;
 import hero.Hero;
 import org.springframework.context.ApplicationContext;
@@ -24,6 +26,10 @@ public class Start {
         ActionProcessor processor = context.getBean(ActionProcessor.class);
         Printer printer = context.getBean(Printer.class);
         Time time = context.getBean(Time.class);
+        DBInitializer dbInit = new DBInitializer();
+        DBWriter dbWriter = new DBWriter();
+
+        dbInit.init();
 
         while(true) {
             adventure.welcome();
@@ -50,6 +56,8 @@ public class Start {
                 break;
             else if(action instanceof utils.Time)
                 time.showTime();
+
+            dbWriter.write(action);
         }
     }
 }

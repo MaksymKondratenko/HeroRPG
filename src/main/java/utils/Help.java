@@ -14,4 +14,9 @@ public class Help extends Action {
     public void showInfo() {
         System.out.println(info);
     }
+
+    @Override
+    public String toString(){
+        return "Help";
+    }
 }

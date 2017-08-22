@@ -1,19 +1,17 @@
 package aspect;
 
-import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 
-@Component
 @Aspect
 public class Aspector {
 
-    @Pointcut("execution(public void show*(..))")
-    public void pc(){}
+    @Pointcut("execution(* welcome*(..))")
+    public void welcome(){}
 
-    @After("pc()")
+    @Before("welcome()")
     public void line(){
-        System.out.println("___________________");
+        System.out.println("--------------------------------");
     }
 }

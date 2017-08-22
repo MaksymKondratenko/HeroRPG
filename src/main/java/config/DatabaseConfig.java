@@ -1,5 +1,6 @@
 package config;
 
+import aspect.Aspector;
 import database.DBReader;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,4 +16,10 @@ public class DatabaseConfig {
 public DBReader actions() {
     return new DBReader();
 }
+
+    @Bean
+    @Scope("prototype")
+    public Aspector aspector(){
+    return new Aspector();
+    }
 }

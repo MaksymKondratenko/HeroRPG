@@ -1,44 +1,27 @@
 package database;
 
 import hero.Action;
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-import java.sql.*;
+import java.util.List;
 
+@Setter
 public class DBReader extends Action {
-
-    Connection conn = null;
-    Statement state = null;
-    ResultSet rs = null;
-    PropertyAgent pa = new PropertyAgent();
+    @Autowired
+            @Qualifier("mysqlDAO")
+    ActionDAO actionDAO;
 
     public void read(){
-        pa.getProperties();;
-
-        try {
-            conn = DriverManager.getConnection("" + pa.getDbUrl() + pa.getDbName() + pa.getConnectionArgs(), pa.getUser(), pa.getPassword());
-            state = conn.createStatement();
-            rs = state.executeQuery("select * from actions");
-            System.out.println("#    Actions");
-            while (rs.next())
-                System.out.println(rs.getInt("id") + ":  " + rs.getString("act"));
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if(conn != null)
-                    conn.close();
-                if(state != null)
-                    state.close();
-                if(rs != null)
-                    rs.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
+        List<String> ls = actionDAO.readFromDB();
+        System.out.println("#   Actions");
+        for(int i = 0; i < ls.size(); i++)
+            System.out.println(i + 1 + ":  " + ls.get(i));
     }
 
     @Override
     public String toString(){
-        return "Database reader";
+        return "Recalling, what was doing";
     }
 }

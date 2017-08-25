@@ -15,7 +15,7 @@ public class Adventure {
         System.out.print("Hi, Hero! Let it be your new adventure!\nYou can read, sleep, eat, work, study, enjoy, wash, train yourself and go date a girl.\n");
     }
     public void welcome(){
-        System.out.print("What you are going to do next? (just type a word! Type \"help\" for help.)\n->");
+        System.out.print("What you are going to do next? (just type a word! Type \"help\" for help.)\n-> ");
     }
 
     @Override

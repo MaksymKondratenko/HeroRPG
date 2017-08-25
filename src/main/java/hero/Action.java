@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter @Setter
-public abstract class Action{
+public class Action{
 
     private int time;
     private int xp;

@@ -11,6 +11,7 @@ import java.util.Properties;
 public class PropertyAgent {
     Properties props = new Properties();
     private String dbUrl;
+    private String fullUrl;
     private String dbName;
     private String connectionArgs;
     private String user;
@@ -26,6 +27,7 @@ public class PropertyAgent {
         }
 
         dbUrl = props.getProperty("dbUrl");
+        fullUrl = props.getProperty("fullUrl");
         dbName = props.getProperty("dbName");
         connectionArgs = props.getProperty("connectionArgs");
         user = props.getProperty("user");

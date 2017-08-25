@@ -3,7 +3,7 @@ package logic;
 import adventure.Adventure;
 import config.AnnotationConfig;
 import database.DBInitializer;
-import database.DBWriter;
+import database.MysqlDAO;
 import hero.Action;
 import hero.Hero;
 import org.springframework.context.ApplicationContext;
@@ -27,7 +27,7 @@ public class Start {
         Printer printer = context.getBean(Printer.class);
         Time time = context.getBean(Time.class);
         DBInitializer dbInit = new DBInitializer();
-        DBWriter dbWriter = new DBWriter();
+        MysqlDAO mysqlDAO = context.getBean(MysqlDAO.class);
 
         dbInit.init();
 
@@ -57,7 +57,7 @@ public class Start {
             else if(action instanceof utils.Time)
                 time.showTime();
 
-            dbWriter.write(action);
+           mysqlDAO.writeToDB(action);
         }
     }
 }

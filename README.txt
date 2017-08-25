@@ -8,9 +8,9 @@ The executable artifact is situated at "out/artifacts/mine_jar3" location.
     Aspects worth mention
 1. Database connectivity properties.
 
-    Code is portable due to encapsulating database connectivity properties in .properties file.
+    Code is portable due to encapsulating DAO connectivity properties in .properties file.
 You could just set them to your own (be sure you changed them!!!), according to your DBC driver
-and your credentials, as database will be initialized by the program.
+and your credentials, as DAO will be initialized by the program.
 
 2. Dependency Injection
 

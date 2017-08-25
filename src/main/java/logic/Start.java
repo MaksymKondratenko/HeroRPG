@@ -2,8 +2,8 @@ package logic;
 
 import adventure.Adventure;
 import config.AnnotationConfig;
-import database.DBInitializer;
-import database.MysqlDAO;
+import DAO.DBInitializer;
+import DAO.MysqlDAO;
 import hero.Action;
 import hero.Hero;
 import org.springframework.context.ApplicationContext;
@@ -26,7 +26,7 @@ public class Start {
         ActionProcessor processor = context.getBean(ActionProcessor.class);
         Printer printer = context.getBean(Printer.class);
         Time time = context.getBean(Time.class);
-        DBInitializer dbInit = new DBInitializer();
+        DBInitializer dbInit = context.getBean(DBInitializer.class);
         MysqlDAO mysqlDAO = context.getBean(MysqlDAO.class);
 
         dbInit.init();

@@ -1,4 +1,4 @@
-package database;
+package DAO;
 
 import hero.Action;
 

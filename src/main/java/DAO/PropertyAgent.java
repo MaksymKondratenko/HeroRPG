@@ -1,4 +1,4 @@
-package database;
+package DAO;
 
 import lombok.Getter;
 
@@ -19,7 +19,7 @@ public class PropertyAgent {
 
     public void getProperties(){
         try {
-            props.load(new FileInputStream("src\\main\\resources\\database\\database_properties.properties"));
+            props.load(new FileInputStream("src\\main\\resources\\DAO\\database_properties.properties"));
         } catch (FileNotFoundException e){
             System.err.println("File not found");
         } catch (IOException e){

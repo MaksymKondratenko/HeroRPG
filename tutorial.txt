@@ -19,7 +19,7 @@ Feel free to imagine. You have a chance to become a couple!
 Other commands:
 
 1) time - shows, how much days, hours and minutes have elapsed, since game universe was created.
-2) actions - retrieves from database the list of conducted actions.
+2) actions - retrieves from DAO the list of conducted actions.
 3) end - to end the Hero's journey and exit.
 
 Other features will be added due to new updates!

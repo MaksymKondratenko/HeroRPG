@@ -14,7 +14,7 @@ import utils.Time;
 @EnableAspectJAutoProxy
 @Lazy
 @Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class, DatabaseConfig.class})
-@ImportResource("classpath:config/context.xml")
+//@ImportResource("classpath:config/context.xml")
 public class AnnotationConfig {
 
     @Bean

@@ -1,4 +1,4 @@
-package database;
+package DAO;
 
 import hero.Action;
 import org.springframework.beans.factory.annotation.Autowired;

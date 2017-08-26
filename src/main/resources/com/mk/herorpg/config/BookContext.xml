@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true"
+>
+
+    <bean id="read" class="com.mk.herorpg.actionImpl.books.Book" depends-on="bookLister" scope="prototype"/>
+    <bean id="arts" class="com.mk.herorpg.actionImpl.books.Arts">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="1"/>
+        <property name="hunger" value="-1"/>
+        <property name="rest" value="1"/>
+        <property name="excitement" value="3"/>
+    </bean>
+    <bean id="business" class="com.mk.herorpg.actionImpl.books.Business">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="2"/>
+        <property name="hunger" value="-3"/>
+        <property name="rest" value="-3"/>
+        <property name="excitement" value="-1"/>
+    </bean>
+    <bean id="economics" class="com.mk.herorpg.actionImpl.books.Economics">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="1"/>
+        <property name="hunger" value="-2"/>
+        <property name="rest" value="-2"/>
+        <property name="excitement" value="-1"/>
+    </bean>
+    <bean id="law" class="com.mk.herorpg.actionImpl.books.Law">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="2"/>
+        <property name="hunger" value="-3"/>
+        <property name="rest" value="-3"/>
+        <property name="excitement" value="-3"/>
+    </bean>
+    <bean id="literature" class="com.mk.herorpg.actionImpl.books.Literature">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="1"/>
+        <property name="hunger" value="-1"/>
+        <property name="rest" value="-1"/>
+        <property name="excitement" value="2"/>
+    </bean>
+    <bean id="programming" class="com.mk.herorpg.actionImpl.books.Programming">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="2"/>
+        <property name="hunger" value="-2"/>
+        <property name="rest" value="-3"/>
+        <property name="excitement" value="-2"/>
+    </bean>
+    <bean id="psychology" class="com.mk.herorpg.actionImpl.books.Psychology">
+        <property name="time" value="#{time.addTime(60)}"/>
+        <property name="xp" value="2"/>
+        <property name="hunger" value="-2"/>
+        <property name="rest" value="-3"/>
+        <property name="excitement" value="-2"/>
+    </bean>
+    <bean id="bookLister" class="com.mk.herorpg.actionImpl.books.BookLister" init-method="showBookList" scope="prototype">
+    <property name="bookList">
+        <list>
+            <ref bean="arts"/>
+            <ref bean="business"/>
+            <ref bean="economics"/>
+            <ref bean="law"/>
+            <ref bean="literature"/>
+            <ref bean="programming"/>
+            <ref bean="psychology"/>
+        </list>
+    </property>
+    </bean>
+    <bean id="bookList" class="java.util.ArrayList" scope="prototype"/>
+</beans>

@@ -2,13 +2,13 @@ Hi, here i would like to introduce you to the game and explain commands Hero is 
 So, lets go:
 
 
-Hero, as you might have been noticed, is a hero of this game. Your task as a player is to have fun, giving him commands and observing his development. So, there are commands�you could ask Hero to do:
+Hero, as you might have been noticed, is a com.mk.herorpg.hero of this game. Your task as a player is to have fun, giving him commands and observing his development. So, there are commands�you could ask Hero to do:
 
-1) read - tells him to read. He will ask to precise your ask and choose from several books categories;
-2) enjoy - tels him to entertain himself. He will ask to precise your ask and choose from several activities he prefers to conduct;
-3) train - tells him to do some exercises. He ask to precise your ask and choose what body element to choose;
+1) read - tells him to read. He will ask to precise your ask and choose from several com.mk.herorpg.actionImpl.books categories;
+2) enjoy - tels him to entertain himself. He will ask to precise your ask and choose from several com.mk.herorpg.actionImpl.activities he prefers to conduct;
+3) train - tells him to do some exercises. He ask to precise your ask and choose what com.mk.herorpg.actionImpl.body element to choose;
 4) eat - tells him to eat. He ask to precise your ask and choose from several meals he prefers;
-5) work - tells him to work. As you will spend some money on different activities, you need to work to survive;
+5) work - tells him to work. As you will spend some money on different com.mk.herorpg.actionImpl.activities, you need to work to survive;
 6) sleep - takes him to have a full sleep;
 7) study - tells him to go to university.
 8) date - tells Hero to go on a date. He'll then ask you to type a name of a girl (maybe even a guy) to go on a date with.
@@ -19,7 +19,7 @@ Feel free to imagine. You have a chance to become a couple!
 Other commands:
 
 1) time - shows, how much days, hours and minutes have elapsed, since game universe was created.
-2) actions - retrieves from DAO the list of conducted actions.
+2) actions - retrieves from com.mk.herorpg.DAO the list of conducted actions.
 3) end - to end the Hero's journey and exit.
 
 Other features will be added due to new updates!

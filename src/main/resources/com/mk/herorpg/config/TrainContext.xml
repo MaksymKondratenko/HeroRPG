@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true"
+>
+
+    <bean id="train" class="com.mk.herorpg.actionImpl.body.Body" depends-on="trainLister" scope="prototype"/>
+    <bean id="bicep" class="com.mk.herorpg.actionImpl.body.Bicep">
+        <property name="time" value="#{time.addTime(30)}"/>
+        <property name="hunger" value="-10"/>
+        <property name="rest" value="-15"/>
+        <property name="excitement" value="-5"/>
+        <property name="money" value="-1"/>
+        <property name="fitness" value="0.05f"/>
+    </bean>
+    <bean id="back" class="com.mk.herorpg.actionImpl.body.Back">
+        <property name="time" value="#{time.addTime(30)}"/>
+        <property name="hunger" value="-10"/>
+        <property name="rest" value="-15"/>
+        <property name="excitement" value="-5"/>
+        <property name="money" value="-1"/>
+        <property name="fitness" value="0.05f"/>
+    </bean>
+    <bean id="legs" class="com.mk.herorpg.actionImpl.body.Legs">
+        <property name="time" value="#{time.addTime(30)}"/>
+        <property name="hunger" value="-10"/>
+        <property name="rest" value="-15"/>
+        <property name="excitement" value="-5"/>
+        <property name="money" value="-1"/>
+        <property name="fitness" value="0.05f"/>
+    </bean>
+    <bean id="neck" class="com.mk.herorpg.actionImpl.body.Neck">
+        <property name="time" value="#{time.addTime(30)}"/>
+        <property name="hunger" value="-10"/>
+        <property name="rest" value="-15"/>
+        <property name="excitement" value="-5"/>
+        <property name="money" value="-1"/>
+        <property name="fitness" value="0.05f"/>
+    </bean>
+    <bean id="press" class="com.mk.herorpg.actionImpl.body.Press">
+        <property name="time" value="#{time.addTime(30)}"/>
+        <property name="hunger" value="-10"/>
+        <property name="rest" value="-15"/>
+        <property name="excitement" value="5"/>
+        <property name="money" value="-1"/>
+        <property name="fitness" value="0.05f"/>
+    </bean>
+    <bean id="trainLister" class="com.mk.herorpg.actionImpl.body.TrainLister" init-method="showTrainList" scope="prototype">
+        <property name="trainList">
+            <list>
+                <ref bean="bicep"/>
+                <ref bean="back"/>
+                <ref bean="legs"/>
+                <ref bean="neck"/>
+                <ref bean="press"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="trainList" class="java.util.ArrayList" scope="prototype"/>
+</beans>

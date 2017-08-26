@@ -18,7 +18,7 @@ public class TimeTest {
     private int d, h, m, date;
     @Autowired
             @Qualifier("time")
-    Time time;
+    private Time time;
 
     @Before
     public void setUp() throws Exception {
@@ -36,17 +36,17 @@ public class TimeTest {
     }
 
     @Test
-    public void getMTest() throws Exception {
+    public void getMTest() {
         assertEquals(1, time.getM());
     }
 
     @Test
-    public void getHTest() throws Exception {
+    public void getHTest() {
         assertEquals(20, time.getH());
     }
 
     @Test
-    public void getDTest() throws Exception {
+    public void getDTest() {
         time.setDate(1440);
         assertEquals(1, time.getD());
     }

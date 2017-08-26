@@ -1,8 +1,9 @@
-package com.mk.herorpg.logic;
+package com.mk.herorpg.actionImpl.books;
 
 import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;
 import com.mk.herorpg.hero.Hero;
+import com.mk.herorpg.logic.ActionProcessor;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,19 +21,19 @@ import static org.junit.Assert.assertNotNull;
 public class BookActionProcessorTest {
     @Autowired
     @Qualifier("programming")
-    Action action;
+    private Action action;
 
     @Autowired
-    @Qualifier("com/mk/herorpg/hero")
-    Hero hero;
+    @Qualifier("hero")
+    private Hero hero;
 
     @Autowired
     @Qualifier("actionProcessor")
-    ActionProcessor processor;
+    private ActionProcessor processor;
 
     @Autowired
     @Qualifier("time")
-    Time time;
+    private Time time;
 
     @After
     public void tearDown() {

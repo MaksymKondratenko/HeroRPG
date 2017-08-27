@@ -1,5 +1,6 @@
 package com.mk.herorpg.DAO;
 
+import com.mk.herorpg.config.HibernateConnector;
 import com.mk.herorpg.hero.Action;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +11,11 @@ import java.util.List;
 @Setter
 public class DBReader extends Action {
     @Autowired
-            @Qualifier("mysqlDAO")
-    ActionDAO actionDAO;
+    @Qualifier("hibernateConnector")
+    private HibernateConnector hConnector;
 
     public void read(){
-        List<String> ls = actionDAO.readFromDB();
+        List<Action> ls = hConnector.read();
         System.out.println("#   Actions");
         for(int i = 0; i < ls.size(); i++)
             System.out.println(i + 1 + ":  " + ls.get(i));

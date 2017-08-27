@@ -24,7 +24,7 @@ public class DBInitializerTest {
 
     @Autowired
     @Qualifier("mysqlDAO")
-    private MysqlDAO dao;
+    private MysqlActionDAO dao;
 
     private List<String> dbContent;
 
@@ -52,6 +52,7 @@ public class DBInitializerTest {
     //new table was initialized, so it has no records, hence list of records has the size of 0
     @Test
     public void initTest() {
+
         initializer.init();
         List<String> ls = dao.readFromDB();
         assertEquals(0, ls.size());

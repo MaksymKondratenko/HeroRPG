@@ -1,15 +1,15 @@
 package com.mk.herorpg.logic;
 
-import com.mk.herorpg.hero.Adventure;
-import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.DAO.DBInitializer;
-import com.mk.herorpg.DAO.MysqlDAO;
+import com.mk.herorpg.config.AnnotationConfig;
+import com.mk.herorpg.config.HibernateConnector;
 import com.mk.herorpg.hero.Action;
+import com.mk.herorpg.hero.Adventure;
 import com.mk.herorpg.hero.Hero;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.mk.herorpg.utils.Printer;
 import com.mk.herorpg.utils.Time;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -27,7 +27,7 @@ public class Start {
         Printer printer = context.getBean(Printer.class);
         Time time = context.getBean(Time.class);
         DBInitializer dbInit = context.getBean(DBInitializer.class);
-        MysqlDAO mysqlDAO = context.getBean(MysqlDAO.class);
+        HibernateConnector hibernateConnector = context.getBean(HibernateConnector.class);
 
         dbInit.init();
 
@@ -57,7 +57,7 @@ public class Start {
             else if(action instanceof com.mk.herorpg.utils.Time)
                 time.showTime();
 
-           mysqlDAO.writeToDB(action);
+           hibernateConnector.write(action);
         }
     }
 }

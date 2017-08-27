@@ -1,5 +1,6 @@
 package com.mk.herorpg.DAO;
 
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -7,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import javax.sql.DataSource;
 
 public class DBInitializer {
-
+    @Getter
     private JdbcTemplate jdbcTemplate;
 
     @Autowired

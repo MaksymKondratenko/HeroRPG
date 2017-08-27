@@ -1,6 +1,7 @@
 package com.mk.herorpg.DAO;
 
 import com.mk.herorpg.hero.Action;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class MysqlDAO implements ActionDAO {
-
+    @Getter
     private JdbcTemplate jdbcTemplate;
 
     @Autowired

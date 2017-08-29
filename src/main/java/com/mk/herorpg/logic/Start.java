@@ -56,6 +56,7 @@ public class Start {
                 time.showTime();
             else if (action instanceof com.mk.herorpg.utils.Exit) {
                 br.close();
+                hibernateConnector.closeConnection();
                 break;
             }
            hibernateConnector.write(action);

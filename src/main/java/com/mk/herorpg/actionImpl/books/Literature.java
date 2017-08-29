@@ -18,6 +18,7 @@ public class Literature extends Book {
     @Value("-1")
     private int rest;
     @Value("2")
+    private int excitement;
 
     @Override
     public String toString() {

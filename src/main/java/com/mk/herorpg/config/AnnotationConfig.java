@@ -14,7 +14,6 @@ import com.mk.herorpg.utils.Time;
 @EnableAspectJAutoProxy
 @Lazy
 @Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class, DatabaseConfig.class})
-//@ImportResource("classpath:com/mk/herorpg/config/context.xml")
 public class AnnotationConfig {
 
     @Bean

@@ -1,6 +1,5 @@
 package com.mk.herorpg.DAO;
 
-import com.mk.herorpg.config.HibernateConnector;
 import com.mk.herorpg.hero.Action;
 import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;

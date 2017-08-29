@@ -1,8 +1,8 @@
 package com.mk.herorpg.logic;
 
 import com.mk.herorpg.DAO.DBInitializer;
+import com.mk.herorpg.DAO.HibernateConnector;
 import com.mk.herorpg.config.AnnotationConfig;
-import com.mk.herorpg.config.HibernateConnector;
 import com.mk.herorpg.hero.Action;
 import com.mk.herorpg.hero.Adventure;
 import com.mk.herorpg.hero.Hero;
@@ -52,11 +52,12 @@ public class Start {
             } else if (action instanceof com.mk.herorpg.actionImpl.washing.Washing) {
                 processor.process(action, hero);
                 printer.printAppeal(hero, action);
-            } else if (action instanceof com.mk.herorpg.utils.Exit)
-                break;
-            else if(action instanceof com.mk.herorpg.utils.Time)
+            } else if(action instanceof com.mk.herorpg.utils.Time)
                 time.showTime();
-
+            else if (action instanceof com.mk.herorpg.utils.Exit) {
+                br.close();
+                break;
+            }
            hibernateConnector.write(action);
         }
     }

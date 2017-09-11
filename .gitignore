@@ -3,3 +3,5 @@
 *.iws
 *.iml
 *.ipr
+target/maven-archiver
+target/surefire-reports

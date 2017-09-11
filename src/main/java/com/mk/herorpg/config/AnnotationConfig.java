@@ -1,5 +1,6 @@
 package com.mk.herorpg.config;
 
+import com.mk.herorpg.XmlBinding.JaxbParserImpl;
 import com.mk.herorpg.hero.Adventure;
 import com.mk.herorpg.hero.Hero;
 import com.mk.herorpg.hero.Level;
@@ -57,6 +58,11 @@ public class AnnotationConfig {
     @Bean
     public ActionProcessor actionProcessor() {
         return new ActionProcessor();
+    }
+
+    @Bean
+    public JaxbParserImpl parser() {
+        return new JaxbParserImpl();
     }
 
 }

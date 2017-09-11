@@ -1,7 +1,6 @@
 package com.mk.herorpg.logic;
 
-import com.mk.herorpg.DAO.DBInitializer;
-import com.mk.herorpg.DAO.HibernateConnector;
+import com.mk.herorpg.XmlBinding.JaxbParserImpl;
 import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;
 import com.mk.herorpg.hero.Adventure;
@@ -12,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 
 
@@ -26,10 +26,13 @@ public class Start {
         ActionProcessor processor = context.getBean(ActionProcessor.class);
         Printer printer = context.getBean(Printer.class);
         Time time = context.getBean(Time.class);
-        DBInitializer dbInit = context.getBean(DBInitializer.class);
+        JaxbParserImpl parser = context.getBean(JaxbParserImpl.class);
+        File file = new File("src\\main\\resources\\com\\mk\\herorpg\\XmlBinding\\hero.xml");
+       /* DBInitializer dbInit = context.getBean(DBInitializer.class);
         HibernateConnector hibernateConnector = context.getBean(HibernateConnector.class);
 
-        dbInit.init();
+        dbInit.init();*/
+        hero = (Hero) parser.getObject(file, Hero.class);
 
         while(true) {
             adventure.welcome();
@@ -56,10 +59,11 @@ public class Start {
                 time.showTime();
             else if (action instanceof com.mk.herorpg.utils.Exit) {
                 br.close();
-                hibernateConnector.closeConnection();
+               // hibernateConnector.closeConnection();
+                parser.saveObject(file, hero);
                 break;
             }
-           hibernateConnector.write(action);
+          // hibernateConnector.write(action);
         }
     }
 }

@@ -5,6 +5,7 @@ import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;
 import com.mk.herorpg.hero.Adventure;
 import com.mk.herorpg.hero.Hero;
+import com.mk.herorpg.utils.JsonConverter;
 import com.mk.herorpg.utils.Printer;
 import com.mk.herorpg.utils.Time;
 import org.springframework.context.ApplicationContext;
@@ -28,7 +29,7 @@ public class Start {
         Time time = context.getBean(Time.class);
         JaxbParserImpl parser = context.getBean(JaxbParserImpl.class);
         File file = new File("src\\main\\resources\\com\\mk\\herorpg\\XmlBinding\\hero.xml");
-       /* DBInitializer dbInit = context.getBean(DBInitializer.class);
+        /*DBInitializer dbInit = context.getBean(DBInitializer.class);
         HibernateConnector hibernateConnector = context.getBean(HibernateConnector.class);
 
         dbInit.init();*/
@@ -59,11 +60,12 @@ public class Start {
                 time.showTime();
             else if (action instanceof com.mk.herorpg.utils.Exit) {
                 br.close();
-               // hibernateConnector.closeConnection();
+               //hibernateConnector.closeConnection();
                 parser.saveObject(file, hero);
+                JsonConverter.toJSON(hero);
                 break;
             }
-          // hibernateConnector.write(action);
+          //hibernateConnector.write(action);
         }
     }
 }

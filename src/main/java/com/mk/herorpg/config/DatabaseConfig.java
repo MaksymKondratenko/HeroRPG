@@ -68,7 +68,7 @@ public Aspector aspector(){
         props.setProperty("hibernate.dialect","org.hibernate.dialect.HSQLDialect");
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource());
-        //sessionFactoryBean.setMappingResources("com" + System.lineSeparator() + "mk" + System.lineSeparator() + "herorpg" + System.lineSeparator() + "DAO" + System.lineSeparator() + "PersistentAction.hbm.xml");
+        sessionFactoryBean.setMappingResources("com" + System.lineSeparator() + "mk" + System.lineSeparator() + "herorpg" + System.lineSeparator() + "DAO" + System.lineSeparator() + "PersistentAction.hbm.xml");
         sessionFactoryBean.setHibernateProperties(props);
         return sessionFactoryBean.getObject();
     }

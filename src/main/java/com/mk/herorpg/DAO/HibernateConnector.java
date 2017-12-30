@@ -10,10 +10,9 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.List;
-
 public class HibernateConnector {
-@Getter @Setter
-        private SessionFactory sessionFactory;
+    @Getter @Setter
+    private SessionFactory sessionFactory;
 
         public void initConnection() {
 
@@ -53,5 +52,6 @@ public class HibernateConnector {
             session.close();
             return result;
         }
-    }
+
+}
 

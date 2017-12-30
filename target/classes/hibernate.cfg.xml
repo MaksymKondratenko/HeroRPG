@@ -31,7 +31,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping resource="com/mk/herorpg/DAO/PersistentAction.hbm.xml"/>
+        <mapping resource="com\mk\herorpg\DAO\PersistentAction.hbm.xml"/>
 
     </session-factory>
 

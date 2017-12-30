@@ -1,5 +1,7 @@
 package com.mk.herorpg.logic;
 
+import com.mk.herorpg.DAO.DBInitializer;
+import com.mk.herorpg.DAO.HibernateConnector;
 import com.mk.herorpg.XmlBinding.JaxbParserImpl;
 import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;
@@ -29,10 +31,10 @@ public class Start {
         Time time = context.getBean(Time.class);
         JaxbParserImpl parser = context.getBean(JaxbParserImpl.class);
         File file = new File("src\\main\\resources\\com\\mk\\herorpg\\XmlBinding\\hero.xml");
-        /*DBInitializer dbInit = context.getBean(DBInitializer.class);
+        DBInitializer dbInit = context.getBean(DBInitializer.class);
         HibernateConnector hibernateConnector = context.getBean(HibernateConnector.class);
 
-        dbInit.init();*/
+        dbInit.init();
         hero = (Hero) parser.getObject(file, Hero.class);
 
         while(true) {

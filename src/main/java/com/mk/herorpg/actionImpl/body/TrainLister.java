@@ -15,7 +15,7 @@ public class TrainLister {
 
     public void showTrainList(){
         getTrainList();
-        System.out.println("Choose and type, what part of your com.mk.herorpg.actionImpl.body you want to train:");
+        System.out.println("Choose and type, what part of your body you want to train:");
         for (Action x : trainList)
             System.out.print(x + ", ");
         System.out.println("\n");

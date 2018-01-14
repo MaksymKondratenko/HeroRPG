@@ -14,6 +14,7 @@ import com.mk.herorpg.utils.Time;
 @Configuration
 @EnableAspectJAutoProxy
 @Lazy
+@ComponentScan(basePackages = "com.mk.herorpg.actioni")
 @Import({ActivitiesConfig.class, BookConfig.class, EnjoymentConfig.class, FoodConfig.class, TrainConfig.class, WashingConfig.class, DatabaseConfig.class})
 public class AnnotationConfig {
 

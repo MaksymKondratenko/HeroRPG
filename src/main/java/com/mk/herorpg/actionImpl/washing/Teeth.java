@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.washing;
+package com.mk.herorpg.actionimpl.washing;
 
 import lombok.Getter;
 import lombok.Setter;

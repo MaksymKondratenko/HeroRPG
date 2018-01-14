@@ -3,12 +3,14 @@ package com.mk.herorpg.utils;
 import com.mk.herorpg.hero.Action;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by Maksym on 20.02.2017.
  */
 
 @Setter //generates setters for all fields
+@Component
 public class Time extends Action {
     private int d = 0;
     private int h = 0;

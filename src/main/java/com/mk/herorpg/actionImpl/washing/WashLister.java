@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.washing;
+package com.mk.herorpg.actionimpl.washing;
 
 import com.mk.herorpg.hero.Action;
 import lombok.AllArgsConstructor;
@@ -16,8 +16,7 @@ public class WashLister {
     public void showWashList(){
         getWashList();
         System.out.println("Choose and type, what you are going to handle with:");
-        for (Action x : washList)
-            System.out.print(x + ", ");
+        washList.forEach(x -> System.out.println(x + ", "));
         System.out.println("\n");
     }
 }

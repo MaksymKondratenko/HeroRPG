@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.body;
+package com.mk.herorpg.actionimpl.body;
 
 import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;

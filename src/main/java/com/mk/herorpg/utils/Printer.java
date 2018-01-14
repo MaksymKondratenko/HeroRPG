@@ -1,13 +1,13 @@
 package com.mk.herorpg.utils;
 
 
-import com.mk.herorpg.actionImpl.body.Body;
-import com.mk.herorpg.actionImpl.books.Book;
-import com.mk.herorpg.actionImpl.enjoyment.Enjoyment;
-import com.mk.herorpg.actionImpl.food.Food;
+import com.mk.herorpg.actionimpl.body.Body;
+import com.mk.herorpg.actionimpl.books.Book;
+import com.mk.herorpg.actionimpl.enjoyment.Enjoyment;
+import com.mk.herorpg.actionimpl.food.Food;
 import com.mk.herorpg.hero.Action;
 import com.mk.herorpg.hero.Hero;
-import com.mk.herorpg.actionImpl.washing.Washing;
+import com.mk.herorpg.actionimpl.washing.Washing;
 
 /**
  * Created by Maksym on 23.02.2017.

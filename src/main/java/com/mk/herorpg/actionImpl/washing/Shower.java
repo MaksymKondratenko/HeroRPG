@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.washing;
+package com.mk.herorpg.actionimpl.washing;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ public class Shower extends Washing {
 
     @Value("Take a shower")
     private String id;
-    @Value("Fast com.mk.herorpg.actionImpl.food in bathing.")
+    @Value("Fast food in bathing.")
     private String info;
     @Value("#{time.addTime(30)}")
     private int time;

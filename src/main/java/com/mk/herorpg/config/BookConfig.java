@@ -1,6 +1,6 @@
 package com.mk.herorpg.config;
 
-import com.mk.herorpg.actionImpl.books.*;
+import com.mk.herorpg.actionimpl.books.*;
 import com.mk.herorpg.hero.Action;
 import org.springframework.context.annotation.*;
 
@@ -61,13 +61,13 @@ public class BookConfig {
     @Bean
     public ArrayList<Action> bookList(){
         ArrayList<Action> list = new ArrayList<>();
-        list.add(new Arts());
-        list.add(new Business());
-        list.add(new Economics());
-        list.add(new Law());
-        list.add(new Literature());
-        list.add(new Programming());
-        list.add(new Psychology());
+        list.add(arts());
+        list.add(business());
+        list.add(economics());
+        list.add(law());
+        list.add(literature());
+        list.add(programming());
+        list.add(psychology());
         return list;
     }
 }

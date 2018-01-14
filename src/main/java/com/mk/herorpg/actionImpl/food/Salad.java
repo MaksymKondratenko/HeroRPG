@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.food;
+package com.mk.herorpg.actionimpl.food;
 
 import lombok.Getter;
 import lombok.Setter;

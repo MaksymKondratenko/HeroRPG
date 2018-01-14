@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.body;
+package com.mk.herorpg.actionimpl.body;
 
 import com.mk.herorpg.hero.Action;
 import lombok.AllArgsConstructor;
@@ -16,8 +16,7 @@ public class TrainLister {
     public void showTrainList(){
         getTrainList();
         System.out.println("Choose and type, what part of your body you want to train:");
-        for (Action x : trainList)
-            System.out.print(x + ", ");
+        trainList.forEach(x -> System.out.println(x + ", "));
         System.out.println("\n");
     }
 }

@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.washing;
+package com.mk.herorpg.actionimpl.washing;
 
 import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;

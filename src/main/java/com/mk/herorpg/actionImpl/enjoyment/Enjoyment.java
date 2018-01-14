@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.enjoyment;
+package com.mk.herorpg.actionimpl.enjoyment;
 
 import com.mk.herorpg.hero.Action;
 

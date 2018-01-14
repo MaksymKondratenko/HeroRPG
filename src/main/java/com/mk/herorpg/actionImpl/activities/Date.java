@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.activities;
+package com.mk.herorpg.actionimpl.activities;
 
 import com.mk.herorpg.hero.Action;
 import com.mk.herorpg.hero.Girl;

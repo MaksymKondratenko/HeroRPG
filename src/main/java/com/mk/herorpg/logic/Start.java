@@ -43,19 +43,19 @@ public class Start {
             String str = br.readLine();
             Action action = (Action) context.getBean(str.toLowerCase());
 
-            if (action instanceof com.mk.herorpg.actionImpl.books.Book || action instanceof com.mk.herorpg.actionImpl.enjoyment.Enjoyment || action instanceof com.mk.herorpg.actionImpl.activities.Dream
-                    || action instanceof com.mk.herorpg.actionImpl.activities.Work) {
+            if (action instanceof com.mk.herorpg.actionimpl.books.Book || action instanceof com.mk.herorpg.actionimpl.enjoyment.Enjoyment || action instanceof com.mk.herorpg.actionimpl.activities.Dream
+                    || action instanceof com.mk.herorpg.actionimpl.activities.Work) {
                 processor.process(action, hero);
                 printer.printStats(hero, action);
-            } else if (action instanceof com.mk.herorpg.actionImpl.activities.Study) {
+            } else if (action instanceof com.mk.herorpg.actionimpl.activities.Study) {
                 processor.process(action, hero);
                 printer.printStats(hero, action);
                 printer.printStudyingProcess(hero, action);
-            } else if (action instanceof com.mk.herorpg.actionImpl.body.Body || action instanceof com.mk.herorpg.actionImpl.food.Food ) {
+            } else if (action instanceof com.mk.herorpg.actionimpl.body.Body || action instanceof com.mk.herorpg.actionimpl.food.Food ) {
                 processor.process(action, hero);
                 printer.printStats(hero, action);
                 printer.printFitness(hero, action);
-            } else if (action instanceof com.mk.herorpg.actionImpl.washing.Washing) {
+            } else if (action instanceof com.mk.herorpg.actionimpl.washing.Washing) {
                 processor.process(action, hero);
                 printer.printAppeal(hero, action);
             } else if(action instanceof com.mk.herorpg.utils.Time)

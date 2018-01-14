@@ -2,7 +2,7 @@ package com.mk.herorpg.config;
 
 import com.mk.herorpg.hero.Action;
 import org.springframework.context.annotation.*;
-import com.mk.herorpg.actionImpl.washing.*;
+import com.mk.herorpg.actionimpl.washing.*;
 
 import java.util.ArrayList;
 

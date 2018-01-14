@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.activities;
+package com.mk.herorpg.actionimpl.activities;
 
 import com.mk.herorpg.config.AnnotationConfig;
 import com.mk.herorpg.hero.Action;
@@ -14,6 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -47,7 +48,7 @@ public class WorkActionProcessorTest {
 
     @Test
     public void timeProcessing() {
-        assertNotNull(time.getDate());
+        assertNotEquals(0, time.getDate());
     }
 
     @Test

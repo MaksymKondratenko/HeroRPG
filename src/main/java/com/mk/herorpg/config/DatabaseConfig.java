@@ -2,9 +2,9 @@ package com.mk.herorpg.config;
 
 import com.mk.herorpg.DAO.*;
 import com.mk.herorpg.aspect.Aspector;
-import org.apache.commons.dbcp2.BasicDataSource;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.*;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 
 import javax.sql.DataSource;
@@ -12,49 +12,52 @@ import java.util.Properties;
 import java.util.logging.Level;
 
 @Configuration
-@ImportResource("com/mk/herorpg/DAO/PersistentAction.hbm.xml")
 public class DatabaseConfig {
 
-@Bean(initMethod = "read")
-@Scope("prototype")
-public DBReader actions() {
-    return new DBReader();
-}
-
-@Bean
-@Scope("prototype")
-public Aspector aspector(){
-    return new Aspector();
+    @Bean(initMethod = "read")
+    @Scope("prototype")
+    public DBReader actions() {
+        return new DBReader();
     }
 
     @Bean
-    public MysqlActionDAO mysqlDAO() {return new MysqlActionDAO();}
+    @Scope("prototype")
+    public Aspector aspector() {
+        return new Aspector();
+    }
+
+    @Bean
+    public MysqlActionDAO mysqlDAO() {
+        return new MysqlActionDAO();
+    }
 
     @Bean(initMethod = "getProperties")
     @Scope
     public PropertyAgent propertyAgent() {
-    return new PropertyAgent();
+        return new PropertyAgent();
     }
 
     @Bean
     @Lazy(false)
     @DependsOn("dataSource")
-    public  DBInitializer dbInitializer() {
-    return new DBInitializer();
+    public DBInitializer dbInitializer() {
+        return new DBInitializer();
     }
 
-   @Bean
-   @Lazy(false)
-   @DependsOn("propertyAgent")
-    public DataSource dataSource(){
-    BasicDataSource dataSource = new BasicDataSource();
-    PropertyAgent pa = propertyAgent();
-    dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-    dataSource.setUrl(pa.getFullUrl());
-    dataSource.setUsername(pa.getUser());
-    dataSource.setPassword(pa.getPassword());
-    return dataSource;
+    @Bean
+    @Lazy(false)
+    @DependsOn("propertyAgent")
+    public DataSource dataSource() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        PropertyAgent pa = propertyAgent();
+        dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        dataSource.setUrl(pa.getFullUrl());
+        dataSource.setUsername(pa.getUser());
+        dataSource.setPassword(pa.getPassword());
+        return dataSource;
     }
+
+
 
     @Bean
     public PersistentAction persistentAction() {

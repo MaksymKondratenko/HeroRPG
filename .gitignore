@@ -1,7 +1,7 @@
 ### IntelliJ IDEA ###
 .idea
+out/*
+target/*
 *.iws
 *.iml
 *.ipr
-target/maven-archiver
-target/surefire-reports

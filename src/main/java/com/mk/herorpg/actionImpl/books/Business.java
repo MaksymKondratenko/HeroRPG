@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.books;
+package com.mk.herorpg.actionimpl.books;
 
 import com.mk.herorpg.hero.Level;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.books;
+package com.mk.herorpg.actionimpl.books;
 
 import com.mk.herorpg.hero.Action;
 import lombok.AllArgsConstructor;
@@ -18,8 +18,7 @@ public class BookLister {
     protected void showBookList(){
         getBookList();
         System.out.println("Choose and type, what a book of what topic you want to read:");
-        for (Action x : bookList)
-            System.out.print(x + ", ");
+        bookList.forEach(x -> System.out.println(x + ", "));
         System.out.println("\n");
     }
 }

@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.enjoyment;
+package com.mk.herorpg.actionimpl.enjoyment;
 
 import com.mk.herorpg.hero.Action;
 import lombok.AllArgsConstructor;
@@ -16,8 +16,7 @@ public class EnjoymentLister {
     public void showEnjoymentList() {
         getEnjoymentList();
         System.out.println("Choose and type, where to go to entertain yourself:");
-        for (Action x : enjoymentList)
-            System.out.print(x + ", ");
+        enjoymentList.forEach(x -> System.out.println(x + ", "));
         System.out.println("\n");
     }
 }

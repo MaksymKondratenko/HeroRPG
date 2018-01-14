@@ -1,4 +1,4 @@
-package com.mk.herorpg.actionImpl.food;
+package com.mk.herorpg.actionimpl.food;
 
 import com.mk.herorpg.hero.Action;
 import lombok.AllArgsConstructor;
@@ -16,8 +16,7 @@ public class FoodLister {
     public void showFoodList(){
         getFoodList();
         System.out.println("Choose and type, what meal you want to eat:");
-        for (Action x : foodList)
-            System.out.print(x + ", ");
+        foodList.forEach(x -> System.out.println(x + ", "));
         System.out.println("\n");
     }
 }

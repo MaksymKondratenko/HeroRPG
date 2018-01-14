@@ -1,6 +1,6 @@
 package com.mk.herorpg.config;
 
-import com.mk.herorpg.actionImpl.enjoyment.*;
+import com.mk.herorpg.actionimpl.enjoyment.*;
 import com.mk.herorpg.hero.Action;
 import org.springframework.context.annotation.*;
 
